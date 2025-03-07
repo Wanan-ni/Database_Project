@@ -8,9 +8,11 @@ from llm_agent.llm_api import LLM_AGENT
 
 app = Flask(__name__)
 
+
 # Load config file
 def load_config():
-    with open('config.json', 'r') as f:
+    config_path = os.path.join(os.path.dirname(__file__), 'llm_agent', 'config.json')
+    with open(config_path, 'r') as f:
         return json.load(f)
 
 
@@ -35,8 +37,16 @@ def get_mongodb_connection():
 
 
 # LLM API
+# def get_llm_agent():
+#     return LLM_AGENT()
 def get_llm_agent():
-    return LLM_AGENT()
+    config_path = os.path.join(os.path.dirname(__file__), 'llm_agent', 'config.json')
+
+    if not os.path.exists(config_path):
+        raise Exception(f'CONFIG_FILE {config_path} doesn\'t exist')
+
+    return LLM_AGENT(CONFIG_FILE=config_path)
+
 
 # Determine if query is for SQL or NoSQL
 def is_nosql_query(query_text):
@@ -97,6 +107,7 @@ def execute_mongodb_query(query_text):
     except Exception as e:
         return {"error": str(e)}
 
+
 def process_query():
     user_input = request.json.get('query')
 
@@ -117,6 +128,93 @@ def process_query():
         "generated_query": generated_query,
         "results": results
     })
+
+
+# Convert natural language query to SQL or MongoDB query using LLM.
+def query_llm(user_input):
+    llm_agent = get_llm_agent()
+
+    mysql_schema = get_mysql_schema()
+    mongodb_schema = get_mongodb_schema()
+
+    prompt = f"""
+You are a database query translator that converts natural language to either SQL or MongoDB queries.
+
+MySQL Database Schema:
+{mysql_schema}
+
+MongoDB Collections Schema:
+{mongodb_schema}
+
+Important rules:
+1. If the query seems to fit a relational data model with structured data, generate a SQL query.
+2. If the query seems to fit a document-based model or mentions specific MongoDB features, generate a MongoDB query.
+3. For SQL, return only the SQL query statement without any explanation.
+4. For MongoDB, return only executable MongoDB query code like db.collection.find({{}}) without any explanation.
+5. Use appropriate protection against SQL injection.
+
+User query: {user_input}
+
+Determine if this is a SQL or MongoDB query and provide the appropriate query:
+"""
+
+    generated_query = llm_agent.call_llm(prompt)
+
+    generated_query = generated_query.strip()
+
+    return generated_query
+
+
+def get_mysql_schema():
+    conn = get_mysql_connection()
+    cursor = conn.cursor()
+    schema = []
+
+    try:
+        cursor.execute("SHOW TABLES")
+        tables = cursor.fetchall()
+
+        for table in tables:
+            table_name = table[0]
+            cursor.execute(f"DESCRIBE {table_name}")
+            columns = cursor.fetchall()
+
+            table_schema = f"Table: {table_name}\nColumns:\n"
+            for column in columns:
+                table_schema += f"- {column[0]} ({column[1]})\n"
+
+            schema.append(table_schema)
+
+        return "\n".join(schema)
+    except Exception as e:
+        return f"Error fetching MySQL schema: {str(e)}"
+    finally:
+        cursor.close()
+        conn.close()
+
+
+def get_mongodb_schema():
+    db = get_mongodb_connection()
+    schema = []
+
+    try:
+        collections = db.list_collection_names()
+
+        for collection_name in collections:
+            sample = db[collection_name].find_one()
+
+            if sample:
+                collection_schema = f"Collection: {collection_name}\nExample document structure:\n"
+                for key, value in sample.items():
+                    if key == "_id":
+                        continue
+                    collection_schema += f"- {key}: {type(value).__name__}\n"
+
+                schema.append(collection_schema)
+
+        return "\n".join(schema)
+    except Exception as e:
+        return f"Error fetching MongoDB schema: {str(e)}"
 
 
 if __name__ == '__main__':
