@@ -8,19 +8,30 @@ from llm_agent.llm_api import LLM_AGENT
 
 app = Flask(__name__)
 
+# Load config file
+def load_config():
+    with open('config.json', 'r') as f:
+        return json.load(f)
+
+
+config = load_config()
+
 # MySQL Connection
-def get_mysql_connection(password, database, host="localhost", user="root"):
+def get_mysql_connection():
+    mysql_config = config["MYSQL_CONFIG"]
     return mysql.connector.connect(
-        host=host,
-        user=user,
-        password=password,
-        database=database
+        host=mysql_config["host"],
+        user=mysql_config["user"],
+        password=mysql_config["password"],
+        database=mysql_config["database"]
     )
 
+
 # MongoDB Connection
-def get_mongodb_connection(database, port, host="localhost"):
-    client = MongoClient(f'mongodb://{host}:{port}/')
-    return client[database]
+def get_mongodb_connection():
+    mongo_config = config["MONGODB_CONFIG"]
+    client = MongoClient(f'mongodb://{mongo_config["host"]}:{mongo_config["port"]}/')
+    return client[mongo_config["database"]]
 
 
 # LLM API
