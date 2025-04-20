@@ -1,0 +1,1482 @@
+[
+  {
+    "edu_id": 1,
+    "candidate_id": "1",
+    "institution_name": "Peters, Kennedy and Andrade University",
+    "degree_name": "PhD",
+    "passing_year": "2015",
+    "grade": "3.42",
+    "grade_type": "GPA",
+    "major": "Mechanical Engineering"
+  },
+  {
+    "edu_id": 2,
+    "candidate_id": "1",
+    "institution_name": "Holland-Fisher University",
+    "degree_name": "B.Sc",
+    "passing_year": "2013",
+    "grade": "84%",
+    "grade_type": "Percentage",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 3,
+    "candidate_id": "2",
+    "institution_name": "Dominguez, Watts and Gonzales University",
+    "degree_name": "M.Sc",
+    "passing_year": "2017",
+    "grade": "60%",
+    "grade_type": "Percentage",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 4,
+    "candidate_id": "2",
+    "institution_name": "Craig Inc University",
+    "degree_name": "M.Tech",
+    "passing_year": "2018",
+    "grade": "Second Class",
+    "grade_type": "Class",
+    "major": "Physics"
+  },
+  {
+    "edu_id": 5,
+    "candidate_id": "3",
+    "institution_name": "Patel PLC University",
+    "degree_name": "M.Tech",
+    "passing_year": "2011",
+    "grade": "2.47",
+    "grade_type": "GPA",
+    "major": "Physics"
+  },
+  {
+    "edu_id": 6,
+    "candidate_id": "4",
+    "institution_name": "Ferrell and Sons University",
+    "degree_name": "M.Tech",
+    "passing_year": "2014",
+    "grade": "95%",
+    "grade_type": "Percentage",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 7,
+    "candidate_id": "4",
+    "institution_name": "King PLC University",
+    "degree_name": "PhD",
+    "passing_year": "2018",
+    "grade": "100%",
+    "grade_type": "Percentage",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 8,
+    "candidate_id": "5",
+    "institution_name": "Boyer, Hopkins and Wallace University",
+    "degree_name": "M.Sc",
+    "passing_year": "2018",
+    "grade": "First Class",
+    "grade_type": "Class",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 9,
+    "candidate_id": "6",
+    "institution_name": "Hunter Ltd University",
+    "degree_name": "B.Sc",
+    "passing_year": "2010",
+    "grade": "3.67",
+    "grade_type": "GPA",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 10,
+    "candidate_id": "7",
+    "institution_name": "Jackson, Taylor and Weaver University",
+    "degree_name": "B.Tech",
+    "passing_year": "2019",
+    "grade": "64%",
+    "grade_type": "Percentage",
+    "major": "Physics"
+  },
+  {
+    "edu_id": 11,
+    "candidate_id": "7",
+    "institution_name": "Pope-Everett University",
+    "degree_name": "PhD",
+    "passing_year": "2024",
+    "grade": "77%",
+    "grade_type": "Percentage",
+    "major": "Mechanical Engineering"
+  },
+  {
+    "edu_id": 12,
+    "candidate_id": "8",
+    "institution_name": "Eaton-Todd University",
+    "degree_name": "B.Tech",
+    "passing_year": "2021",
+    "grade": "3.68",
+    "grade_type": "GPA",
+    "major": "Mechanical Engineering"
+  },
+  {
+    "edu_id": 13,
+    "candidate_id": "8",
+    "institution_name": "May-Howard University",
+    "degree_name": "PhD",
+    "passing_year": "2016",
+    "grade": "Distinction",
+    "grade_type": "Class",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 14,
+    "candidate_id": "9",
+    "institution_name": "Bowen, Lopez and Jenkins University",
+    "degree_name": "M.Tech",
+    "passing_year": "2018",
+    "grade": "96%",
+    "grade_type": "Percentage",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 15,
+    "candidate_id": "10",
+    "institution_name": "Santana and Sons University",
+    "degree_name": "B.Tech",
+    "passing_year": "2020",
+    "grade": "Distinction",
+    "grade_type": "Class",
+    "major": "Physics"
+  },
+  {
+    "edu_id": 16,
+    "candidate_id": "10",
+    "institution_name": "Lopez, Nichols and Fowler University",
+    "degree_name": "B.Tech",
+    "passing_year": "2019",
+    "grade": "93%",
+    "grade_type": "Percentage",
+    "major": "Mechanical Engineering"
+  },
+  {
+    "edu_id": 17,
+    "candidate_id": "11",
+    "institution_name": "Harris-Carter University",
+    "degree_name": "B.Sc",
+    "passing_year": "2020",
+    "grade": "86%",
+    "grade_type": "Percentage",
+    "major": "Physics"
+  },
+  {
+    "edu_id": 18,
+    "candidate_id": "11",
+    "institution_name": "Dyer-Mann University",
+    "degree_name": "B.Sc",
+    "passing_year": "2021",
+    "grade": "86%",
+    "grade_type": "Percentage",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 19,
+    "candidate_id": "12",
+    "institution_name": "Chan LLC University",
+    "degree_name": "B.Sc",
+    "passing_year": "2011",
+    "grade": "92%",
+    "grade_type": "Percentage",
+    "major": "Physics"
+  },
+  {
+    "edu_id": 20,
+    "candidate_id": "13",
+    "institution_name": "Porter Inc University",
+    "degree_name": "M.Tech",
+    "passing_year": "2016",
+    "grade": "73%",
+    "grade_type": "Percentage",
+    "major": "Physics"
+  },
+  {
+    "edu_id": 21,
+    "candidate_id": "13",
+    "institution_name": "Russell, Kim and Kelley University",
+    "degree_name": "B.Sc",
+    "passing_year": "2021",
+    "grade": "Second Class",
+    "grade_type": "Class",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 22,
+    "candidate_id": "14",
+    "institution_name": "Andersen Ltd University",
+    "degree_name": "B.Sc",
+    "passing_year": "2024",
+    "grade": "2.8",
+    "grade_type": "GPA",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 23,
+    "candidate_id": "15",
+    "institution_name": "Carroll, Olson and Douglas University",
+    "degree_name": "M.Tech",
+    "passing_year": "2017",
+    "grade": "First Class",
+    "grade_type": "Class",
+    "major": "Mechanical Engineering"
+  },
+  {
+    "edu_id": 24,
+    "candidate_id": "15",
+    "institution_name": "Hayes-Marks University",
+    "degree_name": "B.Sc",
+    "passing_year": "2015",
+    "grade": "3.27",
+    "grade_type": "GPA",
+    "major": "Mechanical Engineering"
+  },
+  {
+    "edu_id": 25,
+    "candidate_id": "16",
+    "institution_name": "Edwards-Morris University",
+    "degree_name": "M.Sc",
+    "passing_year": "2024",
+    "grade": "97%",
+    "grade_type": "Percentage",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 26,
+    "candidate_id": "16",
+    "institution_name": "Cruz-Pratt University",
+    "degree_name": "B.Sc",
+    "passing_year": "2014",
+    "grade": "2.3",
+    "grade_type": "GPA",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 27,
+    "candidate_id": "17",
+    "institution_name": "Potter-Schneider University",
+    "degree_name": "B.Sc",
+    "passing_year": "2018",
+    "grade": "2.12",
+    "grade_type": "GPA",
+    "major": "Physics"
+  },
+  {
+    "edu_id": 28,
+    "candidate_id": "17",
+    "institution_name": "Monroe-Jackson University",
+    "degree_name": "B.Tech",
+    "passing_year": "2016",
+    "grade": "2.22",
+    "grade_type": "GPA",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 29,
+    "candidate_id": "18",
+    "institution_name": "Allen Inc University",
+    "degree_name": "B.Tech",
+    "passing_year": "2021",
+    "grade": "3.58",
+    "grade_type": "GPA",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 30,
+    "candidate_id": "18",
+    "institution_name": "Johnson, Henry and Pitts University",
+    "degree_name": "PhD",
+    "passing_year": "2014",
+    "grade": "Second Class",
+    "grade_type": "Class",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 31,
+    "candidate_id": "19",
+    "institution_name": "Merritt, Murphy and Barker University",
+    "degree_name": "B.Tech",
+    "passing_year": "2011",
+    "grade": "82%",
+    "grade_type": "Percentage",
+    "major": "Physics"
+  },
+  {
+    "edu_id": 32,
+    "candidate_id": "20",
+    "institution_name": "Roy and Sons University",
+    "degree_name": "B.Sc",
+    "passing_year": "2017",
+    "grade": "60%",
+    "grade_type": "Percentage",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 33,
+    "candidate_id": "20",
+    "institution_name": "Howard, Stephens and Mclean University",
+    "degree_name": "M.Tech",
+    "passing_year": "2015",
+    "grade": "First Class",
+    "grade_type": "Class",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 34,
+    "candidate_id": "21",
+    "institution_name": "Wiley Group University",
+    "degree_name": "M.Tech",
+    "passing_year": "2018",
+    "grade": "Distinction",
+    "grade_type": "Class",
+    "major": "Physics"
+  },
+  {
+    "edu_id": 35,
+    "candidate_id": "21",
+    "institution_name": "Martinez, Johnson and Powell University",
+    "degree_name": "B.Tech",
+    "passing_year": "2011",
+    "grade": "3.4",
+    "grade_type": "GPA",
+    "major": "Physics"
+  },
+  {
+    "edu_id": 36,
+    "candidate_id": "22",
+    "institution_name": "Hatfield, Macdonald and Hopkins University",
+    "degree_name": "M.Sc",
+    "passing_year": "2010",
+    "grade": "Second Class",
+    "grade_type": "Class",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 37,
+    "candidate_id": "23",
+    "institution_name": "Cole, Miller and Wright University",
+    "degree_name": "PhD",
+    "passing_year": "2017",
+    "grade": "72%",
+    "grade_type": "Percentage",
+    "major": "Physics"
+  },
+  {
+    "edu_id": 38,
+    "candidate_id": "24",
+    "institution_name": "Vaughan Inc University",
+    "degree_name": "M.Sc",
+    "passing_year": "2012",
+    "grade": "2.24",
+    "grade_type": "GPA",
+    "major": "Mechanical Engineering"
+  },
+  {
+    "edu_id": 39,
+    "candidate_id": "25",
+    "institution_name": "Horn Ltd University",
+    "degree_name": "B.Tech",
+    "passing_year": "2022",
+    "grade": "First Class",
+    "grade_type": "Class",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 40,
+    "candidate_id": "25",
+    "institution_name": "Martin-Key University",
+    "degree_name": "B.Sc",
+    "passing_year": "2015",
+    "grade": "87%",
+    "grade_type": "Percentage",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 41,
+    "candidate_id": "26",
+    "institution_name": "Cole Inc University",
+    "degree_name": "M.Tech",
+    "passing_year": "2017",
+    "grade": "3.08",
+    "grade_type": "GPA",
+    "major": "Physics"
+  },
+  {
+    "edu_id": 42,
+    "candidate_id": "27",
+    "institution_name": "Swanson, Johnson and Ramsey University",
+    "degree_name": "M.Tech",
+    "passing_year": "2024",
+    "grade": "First Class",
+    "grade_type": "Class",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 43,
+    "candidate_id": "27",
+    "institution_name": "Lopez, Clark and Fernandez University",
+    "degree_name": "M.Tech",
+    "passing_year": "2020",
+    "grade": "2.74",
+    "grade_type": "GPA",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 44,
+    "candidate_id": "28",
+    "institution_name": "Fletcher, Lee and Thompson University",
+    "degree_name": "M.Tech",
+    "passing_year": "2014",
+    "grade": "3.24",
+    "grade_type": "GPA",
+    "major": "Mechanical Engineering"
+  },
+  {
+    "edu_id": 45,
+    "candidate_id": "29",
+    "institution_name": "Yates, Adams and Taylor University",
+    "degree_name": "B.Tech",
+    "passing_year": "2024",
+    "grade": "94%",
+    "grade_type": "Percentage",
+    "major": "Physics"
+  },
+  {
+    "edu_id": 46,
+    "candidate_id": "29",
+    "institution_name": "Phillips, Bryant and Dalton University",
+    "degree_name": "M.Sc",
+    "passing_year": "2010",
+    "grade": "Distinction",
+    "grade_type": "Class",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 47,
+    "candidate_id": "30",
+    "institution_name": "Kaiser LLC University",
+    "degree_name": "M.Tech",
+    "passing_year": "2013",
+    "grade": "84%",
+    "grade_type": "Percentage",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 48,
+    "candidate_id": "31",
+    "institution_name": "Dyer-Clements University",
+    "degree_name": "B.Tech",
+    "passing_year": "2020",
+    "grade": "Second Class",
+    "grade_type": "Class",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 49,
+    "candidate_id": "32",
+    "institution_name": "Brown-Brooks University",
+    "degree_name": "B.Tech",
+    "passing_year": "2023",
+    "grade": "Distinction",
+    "grade_type": "Class",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 50,
+    "candidate_id": "32",
+    "institution_name": "King-Patel University",
+    "degree_name": "M.Sc",
+    "passing_year": "2022",
+    "grade": "First Class",
+    "grade_type": "Class",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 51,
+    "candidate_id": "33",
+    "institution_name": "Bell-Turner University",
+    "degree_name": "B.Sc",
+    "passing_year": "2013",
+    "grade": "Distinction",
+    "grade_type": "Class",
+    "major": "Mechanical Engineering"
+  },
+  {
+    "edu_id": 52,
+    "candidate_id": "34",
+    "institution_name": "Gibson PLC University",
+    "degree_name": "PhD",
+    "passing_year": "2013",
+    "grade": "84%",
+    "grade_type": "Percentage",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 53,
+    "candidate_id": "35",
+    "institution_name": "Henson Ltd University",
+    "degree_name": "B.Sc",
+    "passing_year": "2011",
+    "grade": "80%",
+    "grade_type": "Percentage",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 54,
+    "candidate_id": "36",
+    "institution_name": "Baldwin-Sandoval University",
+    "degree_name": "M.Tech",
+    "passing_year": "2017",
+    "grade": "85%",
+    "grade_type": "Percentage",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 55,
+    "candidate_id": "36",
+    "institution_name": "Henderson, Vaughn and Hernandez University",
+    "degree_name": "M.Sc",
+    "passing_year": "2012",
+    "grade": "2.13",
+    "grade_type": "GPA",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 56,
+    "candidate_id": "37",
+    "institution_name": "Ramsey-Levine University",
+    "degree_name": "B.Sc",
+    "passing_year": "2014",
+    "grade": "3.47",
+    "grade_type": "GPA",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 57,
+    "candidate_id": "38",
+    "institution_name": "Decker, Farmer and Hunt University",
+    "degree_name": "B.Tech",
+    "passing_year": "2011",
+    "grade": "100%",
+    "grade_type": "Percentage",
+    "major": "Mechanical Engineering"
+  },
+  {
+    "edu_id": 58,
+    "candidate_id": "38",
+    "institution_name": "Morales, Nelson and Harrison University",
+    "degree_name": "B.Sc",
+    "passing_year": "2018",
+    "grade": "First Class",
+    "grade_type": "Class",
+    "major": "Mechanical Engineering"
+  },
+  {
+    "edu_id": 59,
+    "candidate_id": "39",
+    "institution_name": "Alvarado, Barron and Conrad University",
+    "degree_name": "PhD",
+    "passing_year": "2010",
+    "grade": "64%",
+    "grade_type": "Percentage",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 60,
+    "candidate_id": "40",
+    "institution_name": "Green Group University",
+    "degree_name": "PhD",
+    "passing_year": "2023",
+    "grade": "2.88",
+    "grade_type": "GPA",
+    "major": "Mechanical Engineering"
+  },
+  {
+    "edu_id": 61,
+    "candidate_id": "41",
+    "institution_name": "Jones-King University",
+    "degree_name": "B.Sc",
+    "passing_year": "2015",
+    "grade": "64%",
+    "grade_type": "Percentage",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 62,
+    "candidate_id": "41",
+    "institution_name": "Meyers Inc University",
+    "degree_name": "B.Tech",
+    "passing_year": "2010",
+    "grade": "2.84",
+    "grade_type": "GPA",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 63,
+    "candidate_id": "42",
+    "institution_name": "Smith, Evans and Matthews University",
+    "degree_name": "M.Tech",
+    "passing_year": "2019",
+    "grade": "72%",
+    "grade_type": "Percentage",
+    "major": "Mechanical Engineering"
+  },
+  {
+    "edu_id": 64,
+    "candidate_id": "42",
+    "institution_name": "Gonzalez PLC University",
+    "degree_name": "M.Sc",
+    "passing_year": "2021",
+    "grade": "3.31",
+    "grade_type": "GPA",
+    "major": "Physics"
+  },
+  {
+    "edu_id": 65,
+    "candidate_id": "43",
+    "institution_name": "Sawyer Ltd University",
+    "degree_name": "B.Sc",
+    "passing_year": "2019",
+    "grade": "3.71",
+    "grade_type": "GPA",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 66,
+    "candidate_id": "44",
+    "institution_name": "Stokes-Joseph University",
+    "degree_name": "B.Sc",
+    "passing_year": "2016",
+    "grade": "98%",
+    "grade_type": "Percentage",
+    "major": "Mechanical Engineering"
+  },
+  {
+    "edu_id": 67,
+    "candidate_id": "45",
+    "institution_name": "Horn, Duran and Torres University",
+    "degree_name": "PhD",
+    "passing_year": "2010",
+    "grade": "2.32",
+    "grade_type": "GPA",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 68,
+    "candidate_id": "45",
+    "institution_name": "Carney Group University",
+    "degree_name": "B.Tech",
+    "passing_year": "2013",
+    "grade": "Second Class",
+    "grade_type": "Class",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 69,
+    "candidate_id": "46",
+    "institution_name": "Walker Group University",
+    "degree_name": "PhD",
+    "passing_year": "2011",
+    "grade": "94%",
+    "grade_type": "Percentage",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 70,
+    "candidate_id": "46",
+    "institution_name": "Buckley, Ali and Drake University",
+    "degree_name": "M.Tech",
+    "passing_year": "2012",
+    "grade": "Second Class",
+    "grade_type": "Class",
+    "major": "Physics"
+  },
+  {
+    "edu_id": 71,
+    "candidate_id": "47",
+    "institution_name": "Gonzalez LLC University",
+    "degree_name": "M.Tech",
+    "passing_year": "2020",
+    "grade": "91%",
+    "grade_type": "Percentage",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 72,
+    "candidate_id": "47",
+    "institution_name": "Robertson-Ford University",
+    "degree_name": "M.Tech",
+    "passing_year": "2020",
+    "grade": "3.35",
+    "grade_type": "GPA",
+    "major": "Mechanical Engineering"
+  },
+  {
+    "edu_id": 73,
+    "candidate_id": "48",
+    "institution_name": "Lewis-Jackson University",
+    "degree_name": "B.Sc",
+    "passing_year": "2010",
+    "grade": "Distinction",
+    "grade_type": "Class",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 74,
+    "candidate_id": "49",
+    "institution_name": "Schultz and Sons University",
+    "degree_name": "B.Sc",
+    "passing_year": "2014",
+    "grade": "Distinction",
+    "grade_type": "Class",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 75,
+    "candidate_id": "49",
+    "institution_name": "Phillips LLC University",
+    "degree_name": "B.Sc",
+    "passing_year": "2011",
+    "grade": "91%",
+    "grade_type": "Percentage",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 76,
+    "candidate_id": "50",
+    "institution_name": "Rubio-Schmidt University",
+    "degree_name": "PhD",
+    "passing_year": "2024",
+    "grade": "3.46",
+    "grade_type": "GPA",
+    "major": "Mechanical Engineering"
+  },
+  {
+    "edu_id": 77,
+    "candidate_id": "50",
+    "institution_name": "Tate, Maxwell and Chandler University",
+    "degree_name": "B.Sc",
+    "passing_year": "2016",
+    "grade": "Distinction",
+    "grade_type": "Class",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 78,
+    "candidate_id": "51",
+    "institution_name": "Caldwell, Griffin and Lane University",
+    "degree_name": "M.Tech",
+    "passing_year": "2021",
+    "grade": "71%",
+    "grade_type": "Percentage",
+    "major": "Mechanical Engineering"
+  },
+  {
+    "edu_id": 79,
+    "candidate_id": "52",
+    "institution_name": "Hoffman Inc University",
+    "degree_name": "B.Sc",
+    "passing_year": "2017",
+    "grade": "2.63",
+    "grade_type": "GPA",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 80,
+    "candidate_id": "53",
+    "institution_name": "Rodriguez, Oconnell and Sanchez University",
+    "degree_name": "PhD",
+    "passing_year": "2011",
+    "grade": "Distinction",
+    "grade_type": "Class",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 81,
+    "candidate_id": "53",
+    "institution_name": "Perez-Hansen University",
+    "degree_name": "B.Sc",
+    "passing_year": "2020",
+    "grade": "2.28",
+    "grade_type": "GPA",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 82,
+    "candidate_id": "54",
+    "institution_name": "Dunlap, Hernandez and Baxter University",
+    "degree_name": "PhD",
+    "passing_year": "2012",
+    "grade": "89%",
+    "grade_type": "Percentage",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 83,
+    "candidate_id": "55",
+    "institution_name": "Smith LLC University",
+    "degree_name": "B.Sc",
+    "passing_year": "2023",
+    "grade": "First Class",
+    "grade_type": "Class",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 84,
+    "candidate_id": "55",
+    "institution_name": "Rogers, Carter and Hoffman University",
+    "degree_name": "PhD",
+    "passing_year": "2021",
+    "grade": "3.73",
+    "grade_type": "GPA",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 85,
+    "candidate_id": "56",
+    "institution_name": "Myers Ltd University",
+    "degree_name": "PhD",
+    "passing_year": "2017",
+    "grade": "Distinction",
+    "grade_type": "Class",
+    "major": "Mechanical Engineering"
+  },
+  {
+    "edu_id": 86,
+    "candidate_id": "56",
+    "institution_name": "Sexton Inc University",
+    "degree_name": "PhD",
+    "passing_year": "2010",
+    "grade": "2.88",
+    "grade_type": "GPA",
+    "major": "Physics"
+  },
+  {
+    "edu_id": 87,
+    "candidate_id": "57",
+    "institution_name": "Hobbs Inc University",
+    "degree_name": "M.Tech",
+    "passing_year": "2023",
+    "grade": "3.19",
+    "grade_type": "GPA",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 88,
+    "candidate_id": "57",
+    "institution_name": "Black, Brown and French University",
+    "degree_name": "B.Tech",
+    "passing_year": "2014",
+    "grade": "Distinction",
+    "grade_type": "Class",
+    "major": "Physics"
+  },
+  {
+    "edu_id": 89,
+    "candidate_id": "58",
+    "institution_name": "Perez, Wilkins and Wallace University",
+    "degree_name": "M.Tech",
+    "passing_year": "2015",
+    "grade": "87%",
+    "grade_type": "Percentage",
+    "major": "Mechanical Engineering"
+  },
+  {
+    "edu_id": 90,
+    "candidate_id": "58",
+    "institution_name": "Flores-Mercer University",
+    "degree_name": "B.Tech",
+    "passing_year": "2020",
+    "grade": "94%",
+    "grade_type": "Percentage",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 91,
+    "candidate_id": "59",
+    "institution_name": "Costa-Pineda University",
+    "degree_name": "M.Tech",
+    "passing_year": "2019",
+    "grade": "72%",
+    "grade_type": "Percentage",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 92,
+    "candidate_id": "60",
+    "institution_name": "Sharp Ltd University",
+    "degree_name": "B.Sc",
+    "passing_year": "2021",
+    "grade": "3.71",
+    "grade_type": "GPA",
+    "major": "Physics"
+  },
+  {
+    "edu_id": 93,
+    "candidate_id": "60",
+    "institution_name": "Hamilton, Harvey and Andrews University",
+    "degree_name": "B.Sc",
+    "passing_year": "2022",
+    "grade": "2.46",
+    "grade_type": "GPA",
+    "major": "Physics"
+  },
+  {
+    "edu_id": 94,
+    "candidate_id": "61",
+    "institution_name": "Blackburn and Sons University",
+    "degree_name": "B.Tech",
+    "passing_year": "2018",
+    "grade": "97%",
+    "grade_type": "Percentage",
+    "major": "Mechanical Engineering"
+  },
+  {
+    "edu_id": 95,
+    "candidate_id": "62",
+    "institution_name": "Bailey, Mejia and Holmes University",
+    "degree_name": "B.Tech",
+    "passing_year": "2022",
+    "grade": "Second Class",
+    "grade_type": "Class",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 96,
+    "candidate_id": "63",
+    "institution_name": "Scott PLC University",
+    "degree_name": "M.Sc",
+    "passing_year": "2021",
+    "grade": "2.28",
+    "grade_type": "GPA",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 97,
+    "candidate_id": "64",
+    "institution_name": "Fox Group University",
+    "degree_name": "B.Sc",
+    "passing_year": "2015",
+    "grade": "96%",
+    "grade_type": "Percentage",
+    "major": "Physics"
+  },
+  {
+    "edu_id": 98,
+    "candidate_id": "65",
+    "institution_name": "Hardin Group University",
+    "degree_name": "B.Tech",
+    "passing_year": "2020",
+    "grade": "Second Class",
+    "grade_type": "Class",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 99,
+    "candidate_id": "65",
+    "institution_name": "Barrett, Doyle and Morris University",
+    "degree_name": "B.Tech",
+    "passing_year": "2011",
+    "grade": "90%",
+    "grade_type": "Percentage",
+    "major": "Mechanical Engineering"
+  },
+  {
+    "edu_id": 100,
+    "candidate_id": "66",
+    "institution_name": "Richardson-Thomas University",
+    "degree_name": "PhD",
+    "passing_year": "2011",
+    "grade": "75%",
+    "grade_type": "Percentage",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 101,
+    "candidate_id": "66",
+    "institution_name": "King PLC University",
+    "degree_name": "M.Tech",
+    "passing_year": "2024",
+    "grade": "First Class",
+    "grade_type": "Class",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 102,
+    "candidate_id": "67",
+    "institution_name": "Gordon Inc University",
+    "degree_name": "M.Sc",
+    "passing_year": "2019",
+    "grade": "3.54",
+    "grade_type": "GPA",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 103,
+    "candidate_id": "67",
+    "institution_name": "Cole, Fox and Case University",
+    "degree_name": "PhD",
+    "passing_year": "2021",
+    "grade": "Second Class",
+    "grade_type": "Class",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 104,
+    "candidate_id": "68",
+    "institution_name": "Jacobs-Estrada University",
+    "degree_name": "PhD",
+    "passing_year": "2018",
+    "grade": "81%",
+    "grade_type": "Percentage",
+    "major": "Physics"
+  },
+  {
+    "edu_id": 105,
+    "candidate_id": "68",
+    "institution_name": "Dougherty LLC University",
+    "degree_name": "M.Sc",
+    "passing_year": "2019",
+    "grade": "67%",
+    "grade_type": "Percentage",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 106,
+    "candidate_id": "69",
+    "institution_name": "Lopez, Zuniga and Ewing University",
+    "degree_name": "PhD",
+    "passing_year": "2023",
+    "grade": "67%",
+    "grade_type": "Percentage",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 107,
+    "candidate_id": "69",
+    "institution_name": "Mitchell, Peterson and Cervantes University",
+    "degree_name": "PhD",
+    "passing_year": "2019",
+    "grade": "82%",
+    "grade_type": "Percentage",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 108,
+    "candidate_id": "70",
+    "institution_name": "Barton-Atkinson University",
+    "degree_name": "B.Tech",
+    "passing_year": "2021",
+    "grade": "3.25",
+    "grade_type": "GPA",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 109,
+    "candidate_id": "70",
+    "institution_name": "Burnett-Wilson University",
+    "degree_name": "M.Tech",
+    "passing_year": "2012",
+    "grade": "First Class",
+    "grade_type": "Class",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 110,
+    "candidate_id": "71",
+    "institution_name": "Taylor, Wright and Martinez University",
+    "degree_name": "B.Tech",
+    "passing_year": "2023",
+    "grade": "First Class",
+    "grade_type": "Class",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 111,
+    "candidate_id": "72",
+    "institution_name": "Turner-Davis University",
+    "degree_name": "B.Sc",
+    "passing_year": "2011",
+    "grade": "96%",
+    "grade_type": "Percentage",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 112,
+    "candidate_id": "73",
+    "institution_name": "Lee-Greene University",
+    "degree_name": "M.Sc",
+    "passing_year": "2024",
+    "grade": "75%",
+    "grade_type": "Percentage",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 113,
+    "candidate_id": "74",
+    "institution_name": "Gibbs, Morales and Camacho University",
+    "degree_name": "B.Tech",
+    "passing_year": "2021",
+    "grade": "73%",
+    "grade_type": "Percentage",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 114,
+    "candidate_id": "74",
+    "institution_name": "Flores, Rogers and Brown University",
+    "degree_name": "B.Tech",
+    "passing_year": "2010",
+    "grade": "3.37",
+    "grade_type": "GPA",
+    "major": "Physics"
+  },
+  {
+    "edu_id": 115,
+    "candidate_id": "75",
+    "institution_name": "Perez-Brown University",
+    "degree_name": "B.Tech",
+    "passing_year": "2023",
+    "grade": "2.93",
+    "grade_type": "GPA",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 116,
+    "candidate_id": "76",
+    "institution_name": "Foster-Alexander University",
+    "degree_name": "M.Sc",
+    "passing_year": "2015",
+    "grade": "Second Class",
+    "grade_type": "Class",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 117,
+    "candidate_id": "76",
+    "institution_name": "Mendoza-Henderson University",
+    "degree_name": "PhD",
+    "passing_year": "2020",
+    "grade": "93%",
+    "grade_type": "Percentage",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 118,
+    "candidate_id": "77",
+    "institution_name": "Potter, Coleman and Ibarra University",
+    "degree_name": "M.Sc",
+    "passing_year": "2014",
+    "grade": "3.0",
+    "grade_type": "GPA",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 119,
+    "candidate_id": "77",
+    "institution_name": "Perry LLC University",
+    "degree_name": "PhD",
+    "passing_year": "2012",
+    "grade": "100%",
+    "grade_type": "Percentage",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 120,
+    "candidate_id": "78",
+    "institution_name": "Gray-Colon University",
+    "degree_name": "PhD",
+    "passing_year": "2019",
+    "grade": "3.01",
+    "grade_type": "GPA",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 121,
+    "candidate_id": "79",
+    "institution_name": "Murray-Carpenter University",
+    "degree_name": "B.Sc",
+    "passing_year": "2024",
+    "grade": "93%",
+    "grade_type": "Percentage",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 122,
+    "candidate_id": "79",
+    "institution_name": "James, Daugherty and Wolfe University",
+    "degree_name": "B.Sc",
+    "passing_year": "2024",
+    "grade": "Second Class",
+    "grade_type": "Class",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 123,
+    "candidate_id": "80",
+    "institution_name": "Adams, Hampton and Benitez University",
+    "degree_name": "B.Tech",
+    "passing_year": "2010",
+    "grade": "78%",
+    "grade_type": "Percentage",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 124,
+    "candidate_id": "81",
+    "institution_name": "Johnson-Rowe University",
+    "degree_name": "M.Tech",
+    "passing_year": "2022",
+    "grade": "3.59",
+    "grade_type": "GPA",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 125,
+    "candidate_id": "82",
+    "institution_name": "Brown Inc University",
+    "degree_name": "B.Tech",
+    "passing_year": "2018",
+    "grade": "67%",
+    "grade_type": "Percentage",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 126,
+    "candidate_id": "83",
+    "institution_name": "Combs-Garcia University",
+    "degree_name": "M.Sc",
+    "passing_year": "2012",
+    "grade": "83%",
+    "grade_type": "Percentage",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 127,
+    "candidate_id": "83",
+    "institution_name": "Turner LLC University",
+    "degree_name": "M.Tech",
+    "passing_year": "2015",
+    "grade": "Distinction",
+    "grade_type": "Class",
+    "major": "Physics"
+  },
+  {
+    "edu_id": 128,
+    "candidate_id": "84",
+    "institution_name": "Brown, Brown and Wood University",
+    "degree_name": "M.Sc",
+    "passing_year": "2024",
+    "grade": "86%",
+    "grade_type": "Percentage",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 129,
+    "candidate_id": "85",
+    "institution_name": "Collins, Ayala and Hernandez University",
+    "degree_name": "B.Tech",
+    "passing_year": "2022",
+    "grade": "2.54",
+    "grade_type": "GPA",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 130,
+    "candidate_id": "86",
+    "institution_name": "Shaffer-Garcia University",
+    "degree_name": "B.Sc",
+    "passing_year": "2012",
+    "grade": "2.45",
+    "grade_type": "GPA",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 131,
+    "candidate_id": "86",
+    "institution_name": "Santiago, Martin and Davis University",
+    "degree_name": "B.Sc",
+    "passing_year": "2010",
+    "grade": "First Class",
+    "grade_type": "Class",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 132,
+    "candidate_id": "87",
+    "institution_name": "Oconnell LLC University",
+    "degree_name": "M.Tech",
+    "passing_year": "2014",
+    "grade": "Second Class",
+    "grade_type": "Class",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 133,
+    "candidate_id": "88",
+    "institution_name": "Wilson Inc University",
+    "degree_name": "PhD",
+    "passing_year": "2014",
+    "grade": "Second Class",
+    "grade_type": "Class",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 134,
+    "candidate_id": "88",
+    "institution_name": "Patrick, Bailey and Jones University",
+    "degree_name": "M.Sc",
+    "passing_year": "2024",
+    "grade": "3.66",
+    "grade_type": "GPA",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 135,
+    "candidate_id": "89",
+    "institution_name": "Frey, Holt and Collins University",
+    "degree_name": "B.Sc",
+    "passing_year": "2011",
+    "grade": "Distinction",
+    "grade_type": "Class",
+    "major": "Mechanical Engineering"
+  },
+  {
+    "edu_id": 136,
+    "candidate_id": "90",
+    "institution_name": "Mathis, Kelley and Rivera University",
+    "degree_name": "B.Tech",
+    "passing_year": "2019",
+    "grade": "3.66",
+    "grade_type": "GPA",
+    "major": "Physics"
+  },
+  {
+    "edu_id": 137,
+    "candidate_id": "90",
+    "institution_name": "Jacobs, Robinson and Gonzalez University",
+    "degree_name": "M.Sc",
+    "passing_year": "2022",
+    "grade": "2.18",
+    "grade_type": "GPA",
+    "major": "Mathematics"
+  },
+  {
+    "edu_id": 138,
+    "candidate_id": "91",
+    "institution_name": "Smith PLC University",
+    "degree_name": "B.Tech",
+    "passing_year": "2012",
+    "grade": "99%",
+    "grade_type": "Percentage",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 139,
+    "candidate_id": "92",
+    "institution_name": "Dixon, Schultz and White University",
+    "degree_name": "B.Tech",
+    "passing_year": "2016",
+    "grade": "99%",
+    "grade_type": "Percentage",
+    "major": "Mechanical Engineering"
+  },
+  {
+    "edu_id": 140,
+    "candidate_id": "92",
+    "institution_name": "Curtis, Wallace and Ayala University",
+    "degree_name": "PhD",
+    "passing_year": "2016",
+    "grade": "Second Class",
+    "grade_type": "Class",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 141,
+    "candidate_id": "93",
+    "institution_name": "Smith and Sons University",
+    "degree_name": "B.Tech",
+    "passing_year": "2021",
+    "grade": "94%",
+    "grade_type": "Percentage",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 142,
+    "candidate_id": "94",
+    "institution_name": "Morgan PLC University",
+    "degree_name": "M.Tech",
+    "passing_year": "2013",
+    "grade": "86%",
+    "grade_type": "Percentage",
+    "major": "Business Administration"
+  },
+  {
+    "edu_id": 143,
+    "candidate_id": "95",
+    "institution_name": "Knight-Thompson University",
+    "degree_name": "B.Sc",
+    "passing_year": "2021",
+    "grade": "Distinction",
+    "grade_type": "Class",
+    "major": "Physics"
+  },
+  {
+    "edu_id": 144,
+    "candidate_id": "96",
+    "institution_name": "Miller and Sons University",
+    "degree_name": "B.Sc",
+    "passing_year": "2016",
+    "grade": "81%",
+    "grade_type": "Percentage",
+    "major": "Mechanical Engineering"
+  },
+  {
+    "edu_id": 145,
+    "candidate_id": "97",
+    "institution_name": "Navarro, Schultz and Medina University",
+    "degree_name": "B.Sc",
+    "passing_year": "2013",
+    "grade": "64%",
+    "grade_type": "Percentage",
+    "major": "Computer Science"
+  },
+  {
+    "edu_id": 146,
+    "candidate_id": "98",
+    "institution_name": "Murphy, Page and Simpson University",
+    "degree_name": "B.Tech",
+    "passing_year": "2016",
+    "grade": "Second Class",
+    "grade_type": "Class",
+    "major": "Mechanical Engineering"
+  },
+  {
+    "edu_id": 147,
+    "candidate_id": "99",
+    "institution_name": "Castillo and Sons University",
+    "degree_name": "B.Tech",
+    "passing_year": "2022",
+    "grade": "2.24",
+    "grade_type": "GPA",
+    "major": "Mechanical Engineering"
+  },
+  {
+    "edu_id": 148,
+    "candidate_id": "100",
+    "institution_name": "Griffin Inc University",
+    "degree_name": "M.Sc",
+    "passing_year": "2021",
+    "grade": "72%",
+    "grade_type": "Percentage",
+    "major": "Physics"
+  }
+]
