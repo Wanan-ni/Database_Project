@@ -1,13 +1,13 @@
 {
   "API_KEY": "AIzaSyAClj6FIRuhpyzEE8B8zJnh6Qfl-oPxP0Y",
   "MYSQL_CONFIG": {
-    "host": "ec2-52-14-16-200.us-east-2.compute.amazonaws.com",
-    "user": "nlq_user",
-    "password": "Dsci-551",
+    "host": "ec2-3-15-21-116.us-east-2.compute.amazonaws.com",
+    "user": "remote",
+    "password": "dsci551",
     "database": "nlq_db"
   },
   "MONGODB_CONFIG": {
-    "host": "ec2-52-14-16-200.us-east-2.compute.amazonaws.com",
+    "host": "ec2-3-15-21-116.us-east-2.compute.amazonaws.com",
     "port": 27017,
     "database": "nlq_db"
   }
