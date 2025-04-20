@@ -1,11 +1,11 @@
 CREATE TABLE candidate (
-    candidate_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    candidate_id INTEGER PRIMARY KEY,
     career_objective TEXT,
     address TEXT
 );
 
 CREATE TABLE education (
-    edu_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    edu_id INTEGER PRIMARY KEY,
     candidate_id INTEGER,
     institution_name TEXT,
     degree_name TEXT,
@@ -17,7 +17,7 @@ CREATE TABLE education (
 );
 
 CREATE TABLE experience (
-    exp_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    exp_id INTEGER PRIMARY KEY,
     candidate_id INTEGER,
     company_name TEXT,
     position TEXT,
