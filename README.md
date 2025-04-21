@@ -2,7 +2,10 @@
 USC DSCI551 2025 Spring Project
 
 
-# Mongodb Instruction
+# Instructions
+
+Note: removing "generate mongodb query:", llm can generate sql query.
+
 ### Step 1 switch to certain database
 ```sql
 generate mongodb query: use nlq_db database
