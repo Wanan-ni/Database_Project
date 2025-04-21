@@ -10,8 +10,9 @@ import ast
 
 app = Flask(__name__)
 
-nosql_keywords = ["find", "aggregate", "insertOne", "updateOne", "deleteOne",
-                      "insertMany", "updateMany", "deleteMany", "collection"]
+operations = ["find", "aggregate", "insertOne", "insertMany",
+                  "updateOne", "updateMany", "deleteOne", "deleteMany", "count", "sort", "limit", "collection"]
+
 
 # Load config file
 def load_config():
@@ -100,19 +101,29 @@ def parse_args(args_str):
         args.append(current.strip())
     return args
 
-def parse_mongodb_query(query):
-    query = query.strip()
+def safe_parse_mongo_expr(expr):
+
+    # step 1: 给所有 key 加引号（支持 $key 和普通 key）
+    expr = re.sub(r'([{,]\s*)(\$?\w+)\s*:', r'\1"\2":', expr)
+
+    # step 2: 替换 true/false/null → True/False/None（适配 ast）
+    expr = expr.replace("true", "True").replace("false", "False").replace("null", "None")
+
+    # step 3: 使用 ast.literal_eval 安全解析
+    return ast.literal_eval(expr)
+def parse_mongodb_query(query_text):
+    query = query_text.strip().replace("\n", "")
+
+    if re.match(r"db\.getCollectionNames\s*\(\s*\)", query_text):
+        return {
+            "operation": "listCollections"
+        }
 
     try:
         collection_match = re.match(r"db\.(\w+)\.", query)
         if not collection_match:
             return {"error": "Collection name not found"}
         collection = collection_match.group(1)
-
-
-        operations = ["find", "aggregate", "insertOne", "insertMany",
-                      "updateOne", "updateMany", "deleteOne", "deleteMany", "count", "sort", "limit", "collection"]
-
 
         op_match = re.search(rf"\.({'|'.join(operations)})\s*\((.*?)\)", query, re.DOTALL) # to handle multi line
         if not op_match:
@@ -126,18 +137,18 @@ def parse_mongodb_query(query):
             "operation": operation
         }
 
-        # Special case: 
-        
+        # Special case:
+
         # find with sort, limit, etc.
         if operation == "find":
-            filter_dict = ast.literal_eval(args) if args else {}
+            filter_dict = safe_parse_mongo_expr(args) if args else {}
             query_dict["filter"] = filter_dict
 
             # handle chained methods: sort, limit, count
             sort_match = re.search(r"\.sort\s*\((.*?)\)", query)
             if sort_match:
                 sort_args = sort_match.group(1).strip()
-                query_dict["sort"] = ast.literal_eval(sort_args)
+                query_dict["sort"] = safe_parse_mongo_expr(sort_args)
 
             limit_match = re.search(r"\.limit\s*\((\d+)\)", query)
             if limit_match:
@@ -148,11 +159,11 @@ def parse_mongodb_query(query):
                 query_dict["count"] = True  # optional flag you can use downstream
 
         elif operation == "aggregate":
-            query_dict["pipeline"] = ast.literal_eval(args)
+            query_dict["pipeline"] = safe_parse_mongo_expr(args)
 
         elif operation in ["insertOne", "insertMany", "updateOne", "updateMany", "deleteOne", "deleteMany"]:
             args_list = [a.strip() for a in parse_args(args)]
-            parsed_args = [ast.literal_eval(arg) for arg in args_list]
+            parsed_args = [safe_parse_mongo_expr(arg) for arg in args_list]
             if operation.startswith("insert"):
                 query_dict["documents"] = parsed_args if operation == "insertMany" else parsed_args[0]
             elif operation.startswith("update"):
@@ -163,7 +174,7 @@ def parse_mongodb_query(query):
 
         elif operation == "count":
             query_dict["count"] = True
-            query_dict["filter"] = ast.literal_eval(args) if args else {}
+            query_dict["filter"] = ast.safe_parse_mongo_expr(args) if args else {}
 
         return query_dict
 
@@ -177,20 +188,30 @@ def execute_mongodb_query(query):
 
     try:
         query_dict = parse_mongodb_query(query)
-        print(query_dict)
+        # print(query_dict)
         collection_name = query_dict.get("collection", None)
         operation = query_dict.get("operation", None)
 
-        if not collection_name or not operation:
-            return {"error": "Missing collection or operation"}
+        #db operations
+        if not collection_name:
+            if operation == "listCollections":
+                return db.list_collection_names()
 
+
+        #collection operations
+        if not operation:
+            return {"error": "Missing collection or operation"}
         collection = db[collection_name]
 
         if operation == "find":
             filter_ = query_dict.get("filter", {})
-            projection = {"_id": 0}
-            tmp = collection.find(filter_, projection)
 
+            if isinstance(filter_, tuple):
+                filter_, projection = filter_
+            else:
+                projection = {"_id": 0}
+
+            tmp = collection.find(filter_, projection)
             if "sort" in query_dict:
                 sort_fields = query_dict["sort"]
                 # Convert dict to list of tuples: {"age": -1} → [("age", -1)]
@@ -227,7 +248,7 @@ def execute_mongodb_query(query):
         elif operation in ["updateOne", "updateMany"]:
             filter_ = query_dict.get("filter")
             update = query_dict.get("update")
-            if not filter_ or not update:
+            if not update:
                 return {"error": "Missing filter or update data"}
 
             if operation == "updateOne":
@@ -316,15 +337,16 @@ def query_llm(user_input):
             Important rules:
             1. If the query seems to fit a relational data model with structured data, generate a SQL query.
             2. If the query seems to fit a document-based model or mentions specific MongoDB features, generate a MongoDB query.
-            3. For SQL, return only the SQL query statement without any explanation.
-            4. For MongoDB, return only executable MongoDB query code in the following format:
+            3. FAll SQL queries must be fully executable by the `mysql` CLI client.
+            4. All MongoDB queries must be valid JavaScript syntax accepted by `mongosh`. We only accept these operations {}
             5. Use appropriate protection against SQL injection.
             
             User query: {}
             
-            Determine if this is a SQL or MongoDB query provide the appropriate query with markdown. Remeber Just give me one type query(SQL or MongoDB), no explaination is needed
+            Determine if this is a SQL or MongoDB query provide the appropriate query with markdown. Remember Just give me one type query(SQL or MongoDB), JUST QUERY! NO EXPLAINATIONS NO COMMENTS ARE NEEDED
             
-            """.format(mysql_schema, mongodb_schema, user_input)
+            """.format(mysql_schema, mongodb_schema, operations, user_input)
+    print(prompt)
     llm_info_dic = {}
     generated_query = llm_agent.call_llm(prompt)
 
