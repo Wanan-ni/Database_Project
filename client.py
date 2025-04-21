@@ -1,7 +1,7 @@
 import requests
 
 def main():
-    print("Welcome to use ChatDB, typ 'exit' to exit")
+    print("********* Welcome to use ChatDB *********")
     url = "http://127.0.0.1:5000/"
     cnt = 0
     all_token_cnt = 0
@@ -21,11 +21,18 @@ def main():
 
             if response.status_code == 200:
                 result = response.json()
-                print("\n ********* LLM generated query *********")
+                print("\n ************** LLM generated query **************")
                 print(result.get("generated_query", "N/A"))
-                print("\n ********* Query result *********")
-                print(result.get("results", "N/A"))
-                print("\n ********* Monitor *********")
+
+                print("\n ************** Query result **************")
+                output = result.get("results", "")
+                if isinstance(output, str):
+                    print(output)
+                else:
+                    for item in output:
+                        print(item)
+
+                print("\n ************** Monitor **************")
                 print(f'Total queries executed:{cnt+1}')
                 print(f'Current tokens used:{result.get("current_tokens_num")}')
                 print(f'Total tokens used:{result.get("current_tokens_num") + all_token_cnt}')

@@ -8,39 +8,38 @@ use nlq_db database
 ```
 ### Show collections info
 ```sql
-show me all tables of nlq_db
-show me schema of all tables in nlq_db
+generate sql query: show me all tables of nlq_db
+generate sql query: show me schema of all tables in nlq_db
+generate sql query: lists all the columns in the candidate
 ```
 ### CRUD
 
 ```sql
 #insert
-generate sql query: insert One example to candidate table, information is candidate_id=11111, career_objective="Make more money"
-generate sql query: insert One example to candidate table, information is candidate_id=22222, career_objective="Make more money"
-generate sql query: insert One example to candidate table, information is candidate_id=33333, career_objective="Make more money"
+1) generate sql query: insert One example to candidate table, information is candidate_id=11111, career_objective="Make more money"
+2) generate sql query: insert One example to candidate table, information is candidate_id=22222, career_objective="Make more money"
+3) generate sql query: insert One example to candidate table, information is candidate_id=33333, career_objective="Make more money"
          
-
 #delete
-generate sql query: delete One example whose candidate_id is 11111
-generate sql query: delete examples whose career_objective is "Make more money"
+4) generate sql query: delete One example whose candidate_id is 11111
+5) generate sql query: delete examples whose career_objective is "Make more money"
 
 #update
-generate sql query: If candidates passing_year smaller than 2020, sbutract 1 from the value of passing_year
-generate sql query: If candidates passing_year >= 2020, sbutract 1 from the value of passing_year
+6) generate sql query: If candidates passing_year smaller than 2020, sbutract 1 from the value of passing_year
+7) generate sql query: If candidates passing_year >= 2020, sbutract 1 from the value of passing_year
 
 #Find
-generate sql query: find distinct candidates all information if their career_objective mentioned AI
-
-generate sql query: find the number of distinct candidates whose career_objective mentioned AI
-
-generate sql query: find 5 candidate whose major is computer science(case insensetive), please return their candidate_id, insititution_name and their degree, you should sort by their insititution_name
-
+8) generate sql query: find distinct candidates all information if their career_objective mentioned AI
+9) generate sql query: find the number of distinct candidates whose career_objective mentioned AI
+10) generate sql query: find 5 candidate whose major is computer science(case insensetive), please return their candidate_id, insititution_name and their degree, you should sort by their insititution_name
+#ORDER BY, LIMIT
 
 #Aggregate
+#SUM, ORDER BY
 generate sql query: Count how many distinct candidates there are for each degree type, return it by sorting degree type
-    
+# HAVING, GROUP BY, 
 generate sql query: find all candidates whose number of experiences equals to the absolute maximum number of experiences. Return their candidate_id and the count of their experiences.
-
+# JOIN
 generate sql query: find how many distinct candidates meet following constraints: they used to be "Software Engineer" and their degree_name is "PhD"(hint: to get correct answer, we need to use three table)
 ```
 
@@ -80,16 +79,18 @@ generate mongodb query: If candidates passing_year smaller than 2020, derement b
 
 #Find
 generate mongodb query: Find candidates all information if their career_objective mentioned AI
-
 generate mongodb query: find the number of candidates whose career_objective mentioned AI, using method find and count
 
+
+#Aggregate 
+
+#$project, $sort, $count
+generate mongodb query: Count how many distinct candidates there are for each degree type, return it by sorting degree type
+
+#$sort, $limit, $group
+generate mongodb query: find 5 candidates whose experience number is bigger or equals than 2,  return their candidate id, and experience count and sorting by their candidate id
 generate mongodb query: find 5 candidate whose major is computer science(case insensetive), please return their candidate_id, insititution_name and their degree, you should sort by their insititution_name, using method find
 
-
-#Aggregate
-generate mongodb query: Count how many distinct candidates there are for each degree type, return it by sorting degree type
-    
-generate mongodb query: find candidates(can be many) whose experience number is bigger or equals than 2, and return their candidate_id, and experience count.
-
+#$lookup, $group, $project
 generate mongodb query: find how many distinct candidates meet following constraints: they used to be "Software Engineer" and their degree_name is "PhD"(hint: to get correct answer, we need to use three table)
 ```

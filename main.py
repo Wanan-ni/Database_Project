@@ -71,7 +71,7 @@ def execute_sql_query(query):
     try:
         cursor.execute(query)
 
-        if query.lower().startswith(("select", "show")):
+        if query.lower().startswith(("select", "show", "describe")):
             results = cursor.fetchall()
             return results
         else:
@@ -298,8 +298,11 @@ def process_query():
     print(llm_info_dic["generated_query"])
     generated_query = clean_query(llm_info_dic["generated_query"])
 
-
-
+    # if "schema" in user_input and "mongodb" in user_input:
+    #     results = get_mongodb_schema()
+    # elif "schema" in user_input:
+    #     results = get_mysql_schema()
+    # else:
     # Execute appropriate query
     if is_nosql_query(generated_query):
         results = execute_mongodb_query(generated_query)
