@@ -1,0 +1,502 @@
+[
+  {
+    "candidate_id": 1,
+    "career_objective": "To contribute to AI research in a forward-thinking company.",
+    "address": "'USNS Acevedo"
+  },
+  {
+    "candidate_id": 2,
+    "career_objective": "To work in a dynamic environment that fosters growth and innovation.",
+    "address": "'0180 Judith Divide Suite 944"
+  },
+  {
+    "candidate_id": 3,
+    "career_objective": "To contribute to AI research in a forward-thinking company.",
+    "address": "'8658 Shaw Ways"
+  },
+  {
+    "candidate_id": 4,
+    "career_objective": "To obtain a challenging position in data science.",
+    "address": "'68301 Kent Crest"
+  },
+  {
+    "candidate_id": 5,
+    "career_objective": "To obtain a challenging position in data science.",
+    "address": "'USNV Bennett"
+  },
+  {
+    "candidate_id": 6,
+    "career_objective": "Seeking a role in software engineering to utilize my coding skills.",
+    "address": "'04253 James Gardens"
+  },
+  {
+    "candidate_id": 7,
+    "career_objective": "To work in a dynamic environment that fosters growth and innovation.",
+    "address": "'7447 Torres Extensions Apt. 391"
+  },
+  {
+    "candidate_id": 8,
+    "career_objective": "Looking to apply analytical skills in a business intelligence role.",
+    "address": "'PSC 0226"
+  },
+  {
+    "candidate_id": 9,
+    "career_objective": "To obtain a challenging position in data science.",
+    "address": "'7062 Taylor Cliffs Suite 075"
+  },
+  {
+    "candidate_id": 10,
+    "career_objective": "Looking to apply analytical skills in a business intelligence role.",
+    "address": "'2272 Samantha Drive"
+  },
+  {
+    "candidate_id": 11,
+    "career_objective": "To obtain a challenging position in data science.",
+    "address": "'608 Rivas Islands Suite 624"
+  },
+  {
+    "candidate_id": 12,
+    "career_objective": "To obtain a challenging position in data science.",
+    "address": "'32679 Perry Port Apt. 504"
+  },
+  {
+    "candidate_id": 13,
+    "career_objective": "To obtain a challenging position in data science.",
+    "address": "'589 Bradley Port Apt. 873"
+  },
+  {
+    "candidate_id": 14,
+    "career_objective": "Seeking a role in software engineering to utilize my coding skills.",
+    "address": "'076 Erik Club"
+  },
+  {
+    "candidate_id": 15,
+    "career_objective": "To contribute to AI research in a forward-thinking company.",
+    "address": "'27902 Graves Rest"
+  },
+  {
+    "candidate_id": 16,
+    "career_objective": "Seeking a role in software engineering to utilize my coding skills.",
+    "address": "'34473 Lane Parks Apt. 742"
+  },
+  {
+    "candidate_id": 17,
+    "career_objective": "To obtain a challenging position in data science.",
+    "address": "'PSC 3172"
+  },
+  {
+    "candidate_id": 18,
+    "career_objective": "To contribute to AI research in a forward-thinking company.",
+    "address": "'08410 Roach Valleys Apt. 100"
+  },
+  {
+    "candidate_id": 19,
+    "career_objective": "Seeking a role in software engineering to utilize my coding skills.",
+    "address": "'2810 Roger Circles"
+  },
+  {
+    "candidate_id": 20,
+    "career_objective": "To obtain a challenging position in data science.",
+    "address": "'318 Cynthia Shore Apt. 548"
+  },
+  {
+    "candidate_id": 21,
+    "career_objective": "To obtain a challenging position in data science.",
+    "address": "'0660 Rios Ramp"
+  },
+  {
+    "candidate_id": 22,
+    "career_objective": "Looking to apply analytical skills in a business intelligence role.",
+    "address": "'18119 Morgan Union Suite 718"
+  },
+  {
+    "candidate_id": 23,
+    "career_objective": "To contribute to AI research in a forward-thinking company.",
+    "address": "'31316 Gutierrez Cove"
+  },
+  {
+    "candidate_id": 24,
+    "career_objective": "Looking to apply analytical skills in a business intelligence role.",
+    "address": "'82943 Christopher Crossing"
+  },
+  {
+    "candidate_id": 25,
+    "career_objective": "To contribute to AI research in a forward-thinking company.",
+    "address": "'Unit 4441 Box 6025"
+  },
+  {
+    "candidate_id": 26,
+    "career_objective": "To contribute to AI research in a forward-thinking company.",
+    "address": "'3048 Tammy Ridge"
+  },
+  {
+    "candidate_id": 27,
+    "career_objective": "To obtain a challenging position in data science.",
+    "address": "'1177 Randall Drive Suite 928"
+  },
+  {
+    "candidate_id": 28,
+    "career_objective": "Seeking a role in software engineering to utilize my coding skills.",
+    "address": "'49172 Jimenez Ways"
+  },
+  {
+    "candidate_id": 29,
+    "career_objective": "To work in a dynamic environment that fosters growth and innovation.",
+    "address": "'951 Merritt Forges"
+  },
+  {
+    "candidate_id": 30,
+    "career_objective": "Seeking a role in software engineering to utilize my coding skills.",
+    "address": "'PSC 0561"
+  },
+  {
+    "candidate_id": 31,
+    "career_objective": "To obtain a challenging position in data science.",
+    "address": "'3093 Jimmy Village"
+  },
+  {
+    "candidate_id": 32,
+    "career_objective": "Seeking a role in software engineering to utilize my coding skills.",
+    "address": "'464 Montes Hollow"
+  },
+  {
+    "candidate_id": 33,
+    "career_objective": "Looking to apply analytical skills in a business intelligence role.",
+    "address": "'USNS Cook"
+  },
+  {
+    "candidate_id": 34,
+    "career_objective": "Seeking a role in software engineering to utilize my coding skills.",
+    "address": "'USNV Graham"
+  },
+  {
+    "candidate_id": 35,
+    "career_objective": "To contribute to AI research in a forward-thinking company.",
+    "address": "'USNV Smith"
+  },
+  {
+    "candidate_id": 36,
+    "career_objective": "Looking to apply analytical skills in a business intelligence role.",
+    "address": "'Unit 0070 Box 6094"
+  },
+  {
+    "candidate_id": 37,
+    "career_objective": "To contribute to AI research in a forward-thinking company.",
+    "address": "'80625 Baker Estates"
+  },
+  {
+    "candidate_id": 38,
+    "career_objective": "Seeking a role in software engineering to utilize my coding skills.",
+    "address": "'111 Elizabeth Greens Apt. 032"
+  },
+  {
+    "candidate_id": 39,
+    "career_objective": "To work in a dynamic environment that fosters growth and innovation.",
+    "address": "'58162 Ruben Circles"
+  },
+  {
+    "candidate_id": 40,
+    "career_objective": "To obtain a challenging position in data science.",
+    "address": "'2802 Thomas Motorway"
+  },
+  {
+    "candidate_id": 41,
+    "career_objective": "Looking to apply analytical skills in a business intelligence role.",
+    "address": "'500 Schneider Crossing Apt. 364"
+  },
+  {
+    "candidate_id": 42,
+    "career_objective": "Looking to apply analytical skills in a business intelligence role.",
+    "address": "'55988 Melissa Trail Suite 393"
+  },
+  {
+    "candidate_id": 43,
+    "career_objective": "To contribute to AI research in a forward-thinking company.",
+    "address": "'418 Bernard Rapid"
+  },
+  {
+    "candidate_id": 44,
+    "career_objective": "Seeking a role in software engineering to utilize my coding skills.",
+    "address": "'7961 Mills Expressway Suite 398"
+  },
+  {
+    "candidate_id": 45,
+    "career_objective": "To obtain a challenging position in data science.",
+    "address": "'420 Meyer Alley Apt. 096"
+  },
+  {
+    "candidate_id": 46,
+    "career_objective": "Looking to apply analytical skills in a business intelligence role.",
+    "address": "'Unit 5978 Box 3854"
+  },
+  {
+    "candidate_id": 47,
+    "career_objective": "Looking to apply analytical skills in a business intelligence role.",
+    "address": "'76536 Melissa Forges"
+  },
+  {
+    "candidate_id": 48,
+    "career_objective": "To obtain a challenging position in data science.",
+    "address": "'67733 Cory Parkway Suite 528"
+  },
+  {
+    "candidate_id": 49,
+    "career_objective": "To work in a dynamic environment that fosters growth and innovation.",
+    "address": "'146 Ellis Burg Suite 741"
+  },
+  {
+    "candidate_id": 50,
+    "career_objective": "To contribute to AI research in a forward-thinking company.",
+    "address": "'90271 Hernandez Neck Suite 340"
+  },
+  {
+    "candidate_id": 51,
+    "career_objective": "Seeking a role in software engineering to utilize my coding skills.",
+    "address": "'1512 Cohen Place Apt. 235"
+  },
+  {
+    "candidate_id": 52,
+    "career_objective": "To contribute to AI research in a forward-thinking company.",
+    "address": "'7249 Lisa Lock"
+  },
+  {
+    "candidate_id": 53,
+    "career_objective": "To work in a dynamic environment that fosters growth and innovation.",
+    "address": "'920 Michelle Mews"
+  },
+  {
+    "candidate_id": 54,
+    "career_objective": "To work in a dynamic environment that fosters growth and innovation.",
+    "address": "'8102 Douglas Stravenue Suite 977"
+  },
+  {
+    "candidate_id": 55,
+    "career_objective": "To obtain a challenging position in data science.",
+    "address": "'202 Nelson Squares Apt. 211"
+  },
+  {
+    "candidate_id": 56,
+    "career_objective": "To contribute to AI research in a forward-thinking company.",
+    "address": "'4806 Morgan Forks Apt. 708"
+  },
+  {
+    "candidate_id": 57,
+    "career_objective": "To obtain a challenging position in data science.",
+    "address": "'2110 Lee Drive Apt. 434"
+  },
+  {
+    "candidate_id": 58,
+    "career_objective": "To work in a dynamic environment that fosters growth and innovation.",
+    "address": "'33819 Michael Corners Suite 550"
+  },
+  {
+    "candidate_id": 59,
+    "career_objective": "To work in a dynamic environment that fosters growth and innovation.",
+    "address": "'473 Sutton Drive"
+  },
+  {
+    "candidate_id": 60,
+    "career_objective": "Seeking a role in software engineering to utilize my coding skills.",
+    "address": "'95420 Christopher Fords Suite 009"
+  },
+  {
+    "candidate_id": 61,
+    "career_objective": "To contribute to AI research in a forward-thinking company.",
+    "address": "'2134 Amy Flats"
+  },
+  {
+    "candidate_id": 62,
+    "career_objective": "To work in a dynamic environment that fosters growth and innovation.",
+    "address": "'323 Schneider Club Suite 077"
+  },
+  {
+    "candidate_id": 63,
+    "career_objective": "Seeking a role in software engineering to utilize my coding skills.",
+    "address": "'85395 Lisa Key"
+  },
+  {
+    "candidate_id": 64,
+    "career_objective": "To obtain a challenging position in data science.",
+    "address": "'Unit 1640 Box 8733"
+  },
+  {
+    "candidate_id": 65,
+    "career_objective": "To obtain a challenging position in data science.",
+    "address": "'0459 Thompson Rapid"
+  },
+  {
+    "candidate_id": 66,
+    "career_objective": "To obtain a challenging position in data science.",
+    "address": "'999 Cruz Radial"
+  },
+  {
+    "candidate_id": 67,
+    "career_objective": "To obtain a challenging position in data science.",
+    "address": "'744 Herrera Course Suite 837"
+  },
+  {
+    "candidate_id": 68,
+    "career_objective": "To obtain a challenging position in data science.",
+    "address": "'75951 Robinson Wells"
+  },
+  {
+    "candidate_id": 69,
+    "career_objective": "Seeking a role in software engineering to utilize my coding skills.",
+    "address": "'216 James Ridges Suite 308"
+  },
+  {
+    "candidate_id": 70,
+    "career_objective": "To work in a dynamic environment that fosters growth and innovation.",
+    "address": "'87014 Paul Ranch Suite 536"
+  },
+  {
+    "candidate_id": 71,
+    "career_objective": "To obtain a challenging position in data science.",
+    "address": "'34766 William Fields"
+  },
+  {
+    "candidate_id": 72,
+    "career_objective": "To work in a dynamic environment that fosters growth and innovation.",
+    "address": "'721 David Land Apt. 414"
+  },
+  {
+    "candidate_id": 73,
+    "career_objective": "To contribute to AI research in a forward-thinking company.",
+    "address": "'266 William Cove"
+  },
+  {
+    "candidate_id": 74,
+    "career_objective": "To contribute to AI research in a forward-thinking company.",
+    "address": "'451 Ashley Ridges Apt. 411"
+  },
+  {
+    "candidate_id": 75,
+    "career_objective": "Looking to apply analytical skills in a business intelligence role.",
+    "address": "'9799 Brown Village"
+  },
+  {
+    "candidate_id": 76,
+    "career_objective": "Seeking a role in software engineering to utilize my coding skills.",
+    "address": "'3745 Matthew Inlet Suite 776"
+  },
+  {
+    "candidate_id": 77,
+    "career_objective": "Seeking a role in software engineering to utilize my coding skills.",
+    "address": "'1952 Fox Views"
+  },
+  {
+    "candidate_id": 78,
+    "career_objective": "Seeking a role in software engineering to utilize my coding skills.",
+    "address": "'61171 Lucas Lock Suite 496"
+  },
+  {
+    "candidate_id": 79,
+    "career_objective": "To contribute to AI research in a forward-thinking company.",
+    "address": "'1936 Evans Islands"
+  },
+  {
+    "candidate_id": 80,
+    "career_objective": "To obtain a challenging position in data science.",
+    "address": "'PSC 7487"
+  },
+  {
+    "candidate_id": 81,
+    "career_objective": "Seeking a role in software engineering to utilize my coding skills.",
+    "address": "'79706 Patricia Path Suite 993"
+  },
+  {
+    "candidate_id": 82,
+    "career_objective": "To obtain a challenging position in data science.",
+    "address": "'298 Dominguez Fork Suite 198"
+  },
+  {
+    "candidate_id": 83,
+    "career_objective": "To work in a dynamic environment that fosters growth and innovation.",
+    "address": "'46593 Graham Oval Apt. 147"
+  },
+  {
+    "candidate_id": 84,
+    "career_objective": "Looking to apply analytical skills in a business intelligence role.",
+    "address": "'PSC 8048"
+  },
+  {
+    "candidate_id": 85,
+    "career_objective": "Seeking a role in software engineering to utilize my coding skills.",
+    "address": "'3929 Rachel Point Suite 756"
+  },
+  {
+    "candidate_id": 86,
+    "career_objective": "Seeking a role in software engineering to utilize my coding skills.",
+    "address": "'06847 Andrew Cove"
+  },
+  {
+    "candidate_id": 87,
+    "career_objective": "To work in a dynamic environment that fosters growth and innovation.",
+    "address": "'PSC 0337"
+  },
+  {
+    "candidate_id": 88,
+    "career_objective": "To work in a dynamic environment that fosters growth and innovation.",
+    "address": "'358 Lisa Ville Suite 709"
+  },
+  {
+    "candidate_id": 89,
+    "career_objective": "To obtain a challenging position in data science.",
+    "address": "'589 Cindy Loaf Apt. 000"
+  },
+  {
+    "candidate_id": 90,
+    "career_objective": "Looking to apply analytical skills in a business intelligence role.",
+    "address": "'8221 Christopher Groves Suite 452"
+  },
+  {
+    "candidate_id": 91,
+    "career_objective": "Looking to apply analytical skills in a business intelligence role.",
+    "address": "'59350 Daniels Crossing Apt. 906"
+  },
+  {
+    "candidate_id": 92,
+    "career_objective": "To contribute to AI research in a forward-thinking company.",
+    "address": "'853 James Springs Suite 939"
+  },
+  {
+    "candidate_id": 93,
+    "career_objective": "Looking to apply analytical skills in a business intelligence role.",
+    "address": "'286 Anthony Mission Apt. 951"
+  },
+  {
+    "candidate_id": 94,
+    "career_objective": "To contribute to AI research in a forward-thinking company.",
+    "address": "'PSC 4666"
+  },
+  {
+    "candidate_id": 95,
+    "career_objective": "Seeking a role in software engineering to utilize my coding skills.",
+    "address": "'032 Novak Meadows Suite 445"
+  },
+  {
+    "candidate_id": 96,
+    "career_objective": "To work in a dynamic environment that fosters growth and innovation.",
+    "address": "'187 Don Avenue Apt. 718"
+  },
+  {
+    "candidate_id": 97,
+    "career_objective": "To work in a dynamic environment that fosters growth and innovation.",
+    "address": "'3358 Meza Forge Suite 782"
+  },
+  {
+    "candidate_id": 98,
+    "career_objective": "To work in a dynamic environment that fosters growth and innovation.",
+    "address": "'954 Hopkins Inlet Apt. 104"
+  },
+  {
+    "candidate_id": 99,
+    "career_objective": "To work in a dynamic environment that fosters growth and innovation.",
+    "address": "'763 Jocelyn Key Apt. 208"
+  },
+  {
+    "candidate_id": 100,
+    "career_objective": "Looking to apply analytical skills in a business intelligence role.",
+    "address": "'5356 John Freeway Apt. 508"
+  }
+]

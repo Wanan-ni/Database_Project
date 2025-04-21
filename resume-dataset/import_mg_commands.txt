@@ -1,0 +1,3 @@
+mongoimport --db nlq_db --collection candidates --file candidates_mongo.json --jsonArray
+mongoimport --db nlq_db --collection education --file education_mongo.json --jsonArray
+mongoimport --db nlq_db --collection experience --file experience_mongo.json --jsonArray
