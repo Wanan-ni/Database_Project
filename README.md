@@ -143,7 +143,7 @@ generate sql query: count how many education records there are for each degree t
 generate sql query: compute the average passing year for each degree type, and sort the result by average passing year in descending order
 ```
 
-#### HAVING, GROUP BY
+#### HAVING
 
 ```sql
 generate sql query: find all candidates whose number of experiences equals to the absolute maximum number of experiences. Return their candidate_id and the count of their experiences.
