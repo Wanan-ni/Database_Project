@@ -33,7 +33,7 @@ python client.py
 You will be prompted to input natural language queries:
 
 ```bash
-please input your query:
+please input your query: 
 ```
 
 
@@ -45,80 +45,135 @@ Type `exit` or `quit` to close the client.
 
 # Mysql Instructions
 
-### Switch to certain database
-
-```sql
-use nlq_db database
-```
-
 ### Schema Exploration
 
 ```sql
--- Ask what tables exist
 generate sql query: show me all tables of nlq_db
+```
 
--- View schema of tables
+```sql
 generate sql query: describe the schema of candidate table in nlq_db
-generate sql query: list all the columns in the candidate table
+```
 
--- Retrieve sample rows
+```sql
+generate sql query: list all the columns in the candidate table
+```
+
+```sql
 generate sql query: show 5 example rows from the experience table
 ```
 
-
 ### CRUD
 
+#### Insert
+
 ```sql
-#insert
-- generate sql query: insert One example to candidate table, information is candidate_id=11111, career_objective="Make more money"
-- generate sql query: insert One example to candidate table, information is candidate_id=22222, career_objective="Make more money"
-- generate sql query: insert One example to candidate table, information is candidate_id=33333, career_objective="Make more money"
+generate sql query: insert One example to candidate table, information is candidate_id=11111, career_objective="Make more money"
+```
 
-To verify insertion: generate sql query: show me all candidates whose career_objective is "Make more money"
+```sql
+generate sql query: insert One example to candidate table, information is candidate_id=22222, career_objective="Make more money"
+```
 
-#delete
-- generate sql query: delete One example whose candidate_id is 11111
-- generate sql query: delete examples whose career_objective is "Make more money"
+```sql
+generate sql query: insert One example to candidate table, information is candidate_id=33333, career_objective="Make more money"
+```
 
-To verify deletion: generate sql query: show me all candidates whose career_objective is "Make more money"
+```sql
+generate sql query: show me all candidates whose career_objective is "Make more money"
+```
 
-#update
-update one row
-- generate sql query: insert one candidate whose candidate_id is 99999 and address is "LA"
-- generate sql query: show the address of candidate whose candidate_id is 99999
-- generate sql query: update the address of candidate whose candidate_id is 99999 to "New York"
-- generate sql query: show the address of candidate whose candidate_id is 99999
+#### Delete
 
-update multiple rows
-- generate sql query: If candidates passing_year smaller than 2020, sbutract 1 from the value of passing_year
-- generate sql query: If candidates passing_year >= 2020, sbutract 1 from the value of passing_year
+```sql
+generate sql query: delete One example whose candidate_id is 11111
+```
 
-#Find
-- generate sql query: find distinct candidates all information if their career_objective mentioned AI
-- generate sql query: find the number of distinct candidates whose career_objective mentioned AI
-- generate sql query: find 5 candidate whose major is computer science(case insensetive), please return their candidate_id, insititution_name and their degree, you should sort by their insititution_name
-#ORDER BY, LIMIT
+```sql
+generate sql query: delete examples whose career_objective is "Make more money"
+```
 
-#Aggregate
-#SUM, ORDER BY
-- generate sql query: Count how many distinct candidates there are for each degree type, return it by sorting degree type
-# HAVING, GROUP BY,
-- generate sql query: find all candidates whose number of experiences equals to the absolute maximum number of experiences. Return their candidate_id and the count of their experiences.
+```sql
+generate sql query: show me all candidates whose career_objective is "Make more money"
+```
 
-# JOIN
-- generate sql query: find how many distinct candidates meet following constraints: they used to be "Software Engineer" and their degree_name is "PhD"(hint: to get correct answer, we need to use three table)
+#### Update one row
+
+```sql
+generate sql query: insert one candidate whose candidate_id is 99999 and address is "LA"
+```
+
+```sql
+generate sql query: show the address of candidate whose candidate_id is 99999
+```
+
+```sql
+generate sql query: update the address of candidate whose candidate_id is 99999 to "New York"
+```
+
+```sql
+generate sql query: show the address of candidate whose candidate_id is 99999
+```
+
+#### Update multiple rows
+
+```sql
+generate sql query: If candidates passing_year smaller than 2020, sbutract 1 from the value of passing_year
+```
+
+```sql
+generate sql query: If candidates passing_year >= 2020, sbutract 1 from the value of passing_year
+```
+
+### Find
+
+```sql
+generate sql query: find distinct candidates all information if their career_objective mentioned AI
+```
+
+```sql
+generate sql query: find the number of distinct candidates whose career_objective mentioned AI
+```
+#### ORDER BY, LIMIT
+```sql
+generate sql query: find 5 candidate whose major is computer science(case insensetive), please return their candidate_id, insititution_name and their degree, you should sort by their insititution_name
+```
+
+### Aggregate
+#### SUM, ORDER BY
+```sql
+generate sql query: Count how many distinct candidates there are for each degree type, return it by sorting degree type
+```
+#### HAVING, GROUP BY
+```sql
+generate sql query: find all candidates whose number of experiences equals to the absolute maximum number of experiences. Return their candidate_id and the count of their experiences.
+```
+
+#### Join
+
+```sql
+generate sql query: find how many distinct candidates meet following constraints: they used to be "Software Engineer" and their degree_name is "PhD"(hint: to get correct answer, we need to use three table)
 ```
 
 
 # Mongodb Instructions
 
-### Show collections info
+### Schema Exploration
+
 ```sql
 generate mongodb query: show me all collections of nlq_db
  ```
  ```sql
-generate mongodb query: show me schema of all collections in nlq_db
+generate mongodb query: show me schema of candidates
 ```
+```sql
+generate mongodb query: show me one example of education
+```
+ ```sql
+generate mongodb query: show me 5 examples of candidates
+```
+
+
 ### CRUD
 
 
@@ -136,15 +191,15 @@ generate mongodb query: delete One example whose candidate_id is 11111
 ```
 #### deleteMany
 ```sql
-generate mongodb query: delete examples whose career_objective is "Make much money"
+generate mongodb query: delete examples whose career_objective is "Make more money"
 ```
 #### updateOne
 ```sql
-generate mongodb query: update one example: derement only one candidate passing_year whose passing_year smaller than 2020
+generate mongodb query: update one example: decrement only one candidate passing_year whose passing_year smaller than 2020
 ```
 #### updateMany
 ```sql
-generate mongodb query: If candidates passing_year smaller than 2020, derement by 1
+generate mongodb query: If candidates passing_year smaller than 2020, add by 5
 ```
 #### Find
 ```sql
@@ -157,18 +212,22 @@ generate mongodb query: find the number of candidates whose career_objective men
 
 #### Aggregate 
 
-$project, $sort, $count
+$groupby, $sort, $count
 ```sql
 generate mongodb query: Count how many distinct candidates there are for each degree type, return it by sorting degree type
 ```
 $sort, $limit, $group
 ```sql
-generate mongodb query: find 5 candidates whose experience number is bigger or equals than 2,  return their candidate id, and experience count and sorting by their candidate id
+generate mongodb query: find 5 candidates whose experience number is bigger than or equals 2,  return their candidate id, and experience count and sorting by their candidate id
 ```
 ```sql
 generate mongodb query: find 5 candidate whose major is computer science(case insensetive), please return their candidate_id, insititution_name and their degree, you should sort by their insititution_name, using method find
 ```
-lookup, $group, $project
+$lookup(2 tables), $group, $project
 ```sql
-generate mongodb query: find how many distinct candidates meet following constraints: they used to be "Software Engineer" and their degree_name is "PhD"(hint: to get correct answer, we need to use three table)
+generate mongodb query: find how many distinct candidates meet following constraints: they used to be "Software Engineer" and their degree name is "PhD"(hint: to get correct answer, we need to use three table), return their id and address
+```
+$lookup(3 tables), $group, $project
+```sql
+generate mongodb query: find candidates meet following constraints: they used to be "Software Engineer" and their degree name is "PhD"(hint: to get correct answer, we need to use three table), return their id and address
 ```

@@ -10,8 +10,8 @@ import ast
 
 app = Flask(__name__)
 
-operations = ["find", "aggregate", "insertOne", "insertMany",
-                  "updateOne", "updateMany", "deleteOne", "deleteMany", "count", "sort", "limit", "collection"]
+operations = ["find", "findOne", "aggregate", "insertOne", "insertMany",
+              "updateOne", "updateMany", "deleteOne", "deleteMany", "count", "sort", "limit", "collection"]
 
 
 # Load config file
@@ -22,6 +22,7 @@ def load_config():
 
 
 config = load_config()
+
 
 # MySQL Connection
 def get_mysql_connection():
@@ -57,9 +58,9 @@ def get_llm_agent():
 def is_nosql_query(query):
     # Simple heuristic - can be improved
     if query.startswith("db"):
-    # for keyword in nosql_keywords:
-    #     if keyword in query.lower():
-            return True
+        # for keyword in nosql_keywords:
+        #     if keyword in query.lower():
+        return True
     return False
 
 
@@ -83,6 +84,7 @@ def execute_sql_query(query):
         cursor.close()
         conn.close()
 
+
 def parse_args(args_str):
     args = []
     brace_level = 0
@@ -101,8 +103,8 @@ def parse_args(args_str):
         args.append(current.strip())
     return args
 
-def safe_parse_mongo_expr(expr):
 
+def safe_parse_mongo_expr(expr):
     # step 1: 给所有 key 加引号（支持 $key 和普通 key）
     expr = re.sub(r'([{,]\s*)(\$?\w+)\s*:', r'\1"\2":', expr)
 
@@ -111,8 +113,11 @@ def safe_parse_mongo_expr(expr):
 
     # step 3: 使用 ast.literal_eval 安全解析
     return ast.literal_eval(expr)
+
+
 def parse_mongodb_query(query_text):
     query = query_text.strip().replace("\n", "")
+    # print(query)
 
     if re.match(r"db\.getCollectionNames\s*\(\s*\)", query_text):
         return {
@@ -125,12 +130,14 @@ def parse_mongodb_query(query_text):
             return {"error": "Collection name not found"}
         collection = collection_match.group(1)
 
-        op_match = re.search(rf"\.({'|'.join(operations)})\s*\((.*?)\)", query, re.DOTALL) # to handle multi line
+        op_match = re.search(rf"\.({'|'.join(operations)})\s*\((.*?)\)", query, re.DOTALL)  # to handle multi line
         if not op_match:
             return {"error": "No recognized operation found"}
 
         operation = op_match.group(1)
+
         args = op_match.group(2).strip()
+        # print("args:", args)
 
         query_dict = {
             "collection": collection,
@@ -140,9 +147,14 @@ def parse_mongodb_query(query_text):
         # Special case:
 
         # find with sort, limit, etc.
-        if operation == "find":
+        if operation in ["find", "findOne"]:
+
             filter_dict = safe_parse_mongo_expr(args) if args else {}
             query_dict["filter"] = filter_dict
+
+            if operation == "findOne":
+                query_dict["limit"] = 1
+                query_dict["findOne"] = True
 
             # handle chained methods: sort, limit, count
             sort_match = re.search(r"\.sort\s*\((.*?)\)", query)
@@ -151,7 +163,7 @@ def parse_mongodb_query(query_text):
                 query_dict["sort"] = safe_parse_mongo_expr(sort_args)
 
             limit_match = re.search(r"\.limit\s*\((\d+)\)", query)
-            if limit_match:
+            if limit_match and operation != "findOne":  # 不覆盖 findOne 的 limit=1
                 query_dict["limit"] = int(limit_match.group(1))
 
             count_match = re.search(r"\.count\s*\(\)", query)
@@ -160,12 +172,13 @@ def parse_mongodb_query(query_text):
 
         elif operation == "aggregate":
             query_dict["pipeline"] = safe_parse_mongo_expr(args)
-
-        elif operation in ["insertOne", "insertMany", "updateOne", "updateMany", "deleteOne", "deleteMany"]:
+        elif operation == "insertMany":
+            query_dict["documents"] = safe_parse_mongo_expr(args)
+        elif operation in ["insertOne", "updateOne", "updateMany", "deleteOne", "deleteMany"]:
             args_list = [a.strip() for a in parse_args(args)]
             parsed_args = [safe_parse_mongo_expr(arg) for arg in args_list]
             if operation.startswith("insert"):
-                query_dict["documents"] = parsed_args if operation == "insertMany" else parsed_args[0]
+                query_dict["documents"] = parsed_args[0]
             elif operation.startswith("update"):
                 query_dict["filter"] = parsed_args[0]
                 query_dict["update"] = parsed_args[1]
@@ -188,22 +201,27 @@ def execute_mongodb_query(query):
 
     try:
         query_dict = parse_mongodb_query(query)
-        # print(query_dict)
+
         collection_name = query_dict.get("collection", None)
         operation = query_dict.get("operation", None)
 
-        #db operations
+        # db operations
         if not collection_name:
             if operation == "listCollections":
                 return db.list_collection_names()
 
-
-        #collection operations
+        # collection operations
         if not operation:
-            return {"error": "Missing collection or operation"}
+            return {"error": "Invalid query"}
         collection = db[collection_name]
 
-        if operation == "find":
+        if operation == "findOne":
+            filter_ = query_dict.get("filter", {})
+            projection = query_dict.get("projection", {"_id": 0})
+            result = collection.find_one(filter_, projection)
+            return result
+
+        elif operation == "find":
             filter_ = query_dict.get("filter", {})
 
             if isinstance(filter_, tuple):
@@ -279,12 +297,14 @@ def execute_mongodb_query(query):
     except Exception as e:
         return {"error": str(e)}
 
+
 def clean_query(text):
     match = re.search(r"```(?:\w+)?\s*([\s\S]*?)\s*```", text)
     if match:
         return match.group(1).strip()
     else:
         return text.strip()
+
 
 @app.route("/", methods=["POST"])
 def process_query():
@@ -295,7 +315,7 @@ def process_query():
 
     # Get query from LLM
     llm_info_dic = query_llm(user_input)
-    print(llm_info_dic["generated_query"])
+    print("generated_query:\n", llm_info_dic["generated_query"])
     generated_query = clean_query(llm_info_dic["generated_query"])
 
     # if "schema" in user_input and "mongodb" in user_input:
@@ -319,8 +339,6 @@ def process_query():
     })
 
 
-
-
 # Convert natural language query to SQL or MongoDB query using LLM.
 def query_llm(user_input):
     llm_agent = get_llm_agent()
@@ -330,26 +348,26 @@ def query_llm(user_input):
 
     prompt = """
             You are a database query translator that converts natural language to either SQL or MongoDB queries.
-            
+
             MySQL Database Schema:
             {}
-            
+
             MongoDB Collections Schema:
             {}
-            
+
             Important rules:
             1. If the query seems to fit a relational data model with structured data, generate a SQL query.
             2. If the query seems to fit a document-based model or mentions specific MongoDB features, generate a MongoDB query.
             3. FAll SQL queries must be fully executable by the `mysql` CLI client.
             4. All MongoDB queries must be valid JavaScript syntax accepted by `mongosh`. We only accept these operations {}
             5. Use appropriate protection against SQL injection.
-            
+
             User query: {}
-            
+
             Determine if this is a SQL or MongoDB query provide the appropriate query with markdown. Remember Just give me one type query(SQL or MongoDB), JUST QUERY! NO EXPLAINATIONS NO COMMENTS ARE NEEDED
-            
+
             """.format(mysql_schema, mongodb_schema, operations, user_input)
-    print(prompt)
+    print("prompt:\n", prompt)
     llm_info_dic = {}
     generated_query = llm_agent.call_llm(prompt)
 
