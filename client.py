@@ -28,9 +28,17 @@ def main():
                 output = result.get("results", "")
                 if isinstance(output, str):
                     print(output)
-                else:
+                elif isinstance(output, list):
                     for item in output:
                         print(item)
+                elif isinstance(output, dict):
+                    for k, v in output.items():
+                        print(f"{k}: {v}")
+                else:
+                    print(output)
+                # else:
+                #     for item in output:
+                #         print(item)
 
                 print("\n ************** Monitor **************")
                 print(f'Total queries executed:{cnt+1}')

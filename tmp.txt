@@ -1,1 +1,1 @@
-db.getCollectionNames()
+DESCRIBE experience;
