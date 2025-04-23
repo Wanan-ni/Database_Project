@@ -13,9 +13,11 @@ USC DSCI551 2025 Spring Project
 
 ![Flow Chart](flow_chart.svg)
 
-####  Result Example. 
+#### Result Example.
+
 Three parts: LLM generated query; Query result; Monitor
 ![Example](result_example.png)
+
 # How to Use ChatDB
 
 1. **Start the backend server**
@@ -138,10 +140,14 @@ generate sql query: find distinct candidates all information if their career_obj
 generate sql query: find the number of distinct candidates whose career_objective mentioned AI
 ```
 
-#### ORDER BY, LIMIT
+#### ORDER BY, LIMIT, OFFSET
 
 ```sql
 generate sql query: find 5 candidate whose major is computer science(case insensetive), please return their candidate_id, insititution_name and their degree, you should sort by their insititution_name
+```
+
+```sql
+generate sql query: skip the first 10 candidates and return the next 5
 ```
 
 ### Aggregate
