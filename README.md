@@ -80,9 +80,6 @@ generate sql query: insert One example to candidate table, information is candid
 generate sql query: insert One example to candidate table, information is candidate_id=22222, career_objective="Make more money"
 ```
 
-```sql
-generate sql query: insert One example to candidate table, information is candidate_id=33333, career_objective="Make more money"
-```
 
 ```sql
 generate sql query: show me all candidates whose career_objective is "Make more money"
@@ -109,10 +106,6 @@ generate sql query: insert one candidate whose candidate_id is 99999 and address
 ```
 
 ```sql
-generate sql query: show the address of candidate whose candidate_id is 99999
-```
-
-```sql
 generate sql query: update the address of candidate whose candidate_id is 99999 to "New York"
 ```
 
@@ -126,25 +119,13 @@ generate sql query: show the address of candidate whose candidate_id is 99999
 generate sql query: If candidates passing_year smaller than 2020, sbutract 1 from the value of passing_year
 ```
 
-```sql
-generate sql query: If candidates passing_year >= 2020, sbutract 1 from the value of passing_year
-```
-
 ### Find
 
 ```sql
 generate sql query: find distinct candidates all information if their career_objective mentioned AI
 ```
 
-```sql
-generate sql query: find the number of distinct candidates whose career_objective mentioned AI
-```
-
-#### ORDER BY, LIMIT, OFFSET
-
-```sql
-generate sql query: find 5 candidate whose major is computer science(case insensetive), please return their candidate_id, insititution_name and their degree, you should sort by their insititution_name
-```
+#### LIMIT, OFFSET
 
 ```sql
 generate sql query: skip the first 10 candidates and return the next 5
@@ -152,11 +133,13 @@ generate sql query: skip the first 10 candidates and return the next 5
 
 ### Aggregate
 
-#### AVG, ORDER BY
-
+#### COUNT & GROUP BY
 ```sql
-generate sql query: compute the average passing year for each degree type, and sort the result by average passing year in descending order
+generate sql query: count how many education records there are for each degree type
 ```
+
+#### AVG & ORDER BY
+generate sql query: compute the average passing year for each degree type, and sort the result by average passing year in descending order
 
 #### HAVING, GROUP BY
 
