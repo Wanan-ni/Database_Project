@@ -9,6 +9,10 @@ USC DSCI551 2025 Spring Project
 - Dataset: Subset of [Resume Dataset (Kaggle)](https://www.kaggle.com/datasets/saugataroyarghya/resume-dataset)
 - Schema: `candidates`, `education`, `experience` used in both MySQL and MongoDB
 
+# Project Workflow
+
+![Flow Chart](flow_chart.svg)
+
 # How to Use ChatDB
 
 1. **Start the backend server**
@@ -20,7 +24,6 @@ python main.py
 ```
 
 Once the server is running at `http://127.0.0.1:5000`, leave this terminal open.
-
 
 2. **Run the client interface**
 
@@ -36,12 +39,9 @@ You will be prompted to input natural language queries:
 please input your query: 
 ```
 
-
-
 3. **Exit**
 
 Type `exit` or `quit` to close the client.
-
 
 # Mysql Instructions
 
@@ -134,17 +134,23 @@ generate sql query: find distinct candidates all information if their career_obj
 ```sql
 generate sql query: find the number of distinct candidates whose career_objective mentioned AI
 ```
+
 #### ORDER BY, LIMIT
+
 ```sql
 generate sql query: find 5 candidate whose major is computer science(case insensetive), please return their candidate_id, insititution_name and their degree, you should sort by their insititution_name
 ```
 
 ### Aggregate
+
 #### SUM, ORDER BY
+
 ```sql
 generate sql query: Count how many distinct candidates there are for each degree type, return it by sorting degree type
 ```
+
 #### HAVING, GROUP BY
+
 ```sql
 generate sql query: find all candidates whose number of experiences equals to the absolute maximum number of experiences. Return their candidate_id and the count of their experiences.
 ```
@@ -155,53 +161,66 @@ generate sql query: find all candidates whose number of experiences equals to th
 generate sql query: find how many distinct candidates meet following constraints: they used to be "Software Engineer" and their degree_name is "PhD"(hint: to get correct answer, we need to use three table)
 ```
 
-
 # Mongodb Instructions
 
 ### Schema Exploration
 
 ```sql
 generate mongodb query: show me all collections of nlq_db
- ```
- ```sql
+```
+
+```sql
 generate mongodb query: show me schema of candidates
 ```
+
 ```sql
 generate mongodb query: show me one example of education
 ```
- ```sql
+
+```sql
 generate mongodb query: show me 5 examples of candidates
 ```
 
-
 ### CRUD
 
-
 #### insertOne
+
 ```sql
 generate mongodb query: insert One example to candidates collection, information is {"candidate_id": 11111, "career_objective":"Make more money"}
-```        
+```
+
 #### insertMany
+
 ```sql
 generate mongodb query: insert Many examples to candidates collection, information is {"candidate_id": 22222, "career_objective":"Make more money"}, {"candidate_id": 44444, "career_objective":"Make more money"}, {"candidate_id": 33333, "career_objective":"Make more money"}
 ```
+
 #### deleteOne
-```sql         
+
+```sql
 generate mongodb query: delete One example whose candidate_id is 11111
 ```
+
 #### deleteMany
+
 ```sql
 generate mongodb query: delete examples whose career_objective is "Make more money"
 ```
+
 #### updateOne
+
 ```sql
 generate mongodb query: update one example: decrement only one candidate passing_year whose passing_year smaller than 2020
 ```
+
 #### updateMany
+
 ```sql
 generate mongodb query: If candidates passing_year smaller than 2020, add by 5
 ```
+
 #### Find
+
 ```sql
 generate mongodb query: Find candidates all information if their career_objective mentioned AI
 ```
@@ -210,24 +229,32 @@ generate mongodb query: Find candidates all information if their career_objectiv
 generate mongodb query: find the number of candidates whose career_objective mentioned AI, using method find and count
 ```
 
-#### Aggregate 
+#### Aggregate
 
 $groupby, $sort, $count
+
 ```sql
 generate mongodb query: Count how many distinct candidates there are for each degree type, return it by sorting degree type
 ```
+
 $sort, $limit, $group
+
 ```sql
 generate mongodb query: find 5 candidates whose experience number is bigger than or equals 2,  return their candidate id, and experience count and sorting by their candidate id
 ```
+
 ```sql
 generate mongodb query: find 5 candidate whose major is computer science(case insensetive), please return their candidate_id, insititution_name and their degree, you should sort by their insititution_name, using method find
 ```
+
 $lookup(2 tables), $group, $project
+
 ```sql
 generate mongodb query: find how many distinct candidates meet following constraints: they used to be "Software Engineer" and their degree name is "PhD"(hint: to get correct answer, we need to use three table), return their id and address
 ```
+
 $lookup(3 tables), $group, $project
+
 ```sql
 generate mongodb query: find candidates meet following constraints: they used to be "Software Engineer" and their degree name is "PhD"(hint: to get correct answer, we need to use three table), return their id and address
 ```
