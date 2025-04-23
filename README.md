@@ -139,7 +139,9 @@ generate sql query: count how many education records there are for each degree t
 ```
 
 #### AVG & ORDER BY
+```sql
 generate sql query: compute the average passing year for each degree type, and sort the result by average passing year in descending order
+```
 
 #### HAVING, GROUP BY
 
