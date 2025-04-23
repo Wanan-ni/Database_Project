@@ -367,7 +367,7 @@ def query_llm(user_input):
             Determine if this is a SQL or MongoDB query provide the appropriate query with markdown. Remember Just give me one type query(SQL or MongoDB), JUST QUERY! NO EXPLAINATIONS NO COMMENTS ARE NEEDED
 
             """.format(mysql_schema, mongodb_schema, operations, user_input)
-    print("prompt:\n", prompt)
+    # print("prompt:\n", prompt)
     llm_info_dic = {}
     generated_query = llm_agent.call_llm(prompt)
 

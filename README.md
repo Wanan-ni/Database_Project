@@ -225,45 +225,35 @@ generate mongodb query: update one example: decrement only one candidate passing
 #### updateMany
 
 ```sql
-generate mongodb query: If candidates passing_year smaller than 2020, add by 5
+generate mongodb query: If candidates passing_year smaller than 2030, decrement by 5
 ```
 
 #### Find
 
-```sql
-generate mongodb query: Find candidates all information if their career_objective mentioned AI
-```
 
 ```sql
 generate mongodb query: find the number of candidates whose career_objective mentioned AI, using method find and count
 ```
 
 #### Aggregate
-
-$groupby, $sort, $count
+$sort, $limit, $skip, $group, $count, $project
 
 ```sql
-generate mongodb query: Count how many distinct candidates there are for each degree type, return it by sorting degree type
+generate mongodb query: find 5 candidates whose experience number is bigger than or equals 2,  return their candidate id, and experience count and sorting by their candidate id, please skip the first 5 results
 ```
-
-$sort, $limit, $group
-
+$avg
 ```sql
-generate mongodb query: find 5 candidates whose experience number is bigger than or equals 2,  return their candidate id, and experience count and sorting by their candidate id
-```
-
-```sql
-generate mongodb query: find 5 candidate whose major is computer science(case insensetive), please return their candidate_id, insititution_name and their degree, you should sort by their insititution_name, using method find
+generate mongodb query: find average passing year of all candidates
 ```
 
 $lookup(2 tables), $group, $project
 
 ```sql
-generate mongodb query: find how many distinct candidates meet following constraints: they used to be "Software Engineer" and their degree name is "PhD"(hint: to get correct answer, we need to use three table), return their id and address
+generate mongodb query: find how many distinct candidates meet following constraints: they used to be "Software Engineer" and their degree name is "PhD"(hint: to get correct answer, we need to use two tables)
 ```
 
 $lookup(3 tables), $group, $project
 
 ```sql
-generate mongodb query: find candidates meet following constraints: they used to be "Software Engineer" and their degree name is "PhD"(hint: to get correct answer, we need to use three table), return their id and address
+generate mongodb query: find candidates meet following constraints: they used to be "Software Engineer" and their degree name is "PhD"(hint: to get correct answer, we need to use three tables), return their id and address
 ```

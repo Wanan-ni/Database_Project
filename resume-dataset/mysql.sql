@@ -9,7 +9,7 @@ CREATE TABLE education (
     candidate_id INTEGER,
     institution_name TEXT,
     degree_name TEXT,
-    passing_year TEXT,
+    passing_year INTEGER,
     grade TEXT,
     grade_type TEXT,
     major TEXT,
