@@ -13,6 +13,9 @@ USC DSCI551 2025 Spring Project
 
 ![Flow Chart](flow_chart.svg)
 
+####  Result Example. 
+Three parts: LLM generated query; Query result; Monitor
+![Example](result_example.png)
 # How to Use ChatDB
 
 1. **Start the backend server**
