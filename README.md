@@ -152,10 +152,10 @@ generate sql query: skip the first 10 candidates and return the next 5
 
 ### Aggregate
 
-#### SUM, ORDER BY
+#### AVG, ORDER BY
 
 ```sql
-generate sql query: Count how many distinct candidates there are for each degree type, return it by sorting degree type
+generate sql query: compute the average passing year for each degree type, and sort the result by average passing year in descending order
 ```
 
 #### HAVING, GROUP BY
