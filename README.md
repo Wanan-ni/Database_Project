@@ -253,7 +253,7 @@ generate mongodb query: find 5 candidate whose major is computer science(case in
 $lookup(2 tables), $group, $project
 
 ```sql
-generate mongodb query: find how many distinct candidates meet following constraints: they used to be "Software Engineer" and their degree name is "PhD"(hint: to get correct answer, we need to use three table), return their id and address
+generate mongodb query: find how many distinct candidates meet following constraints: they used to be "Software Engineer" and their degree name is "PhD"(hint: to get correct answer, we need to use three table)
 ```
 
 $lookup(3 tables), $group, $project
