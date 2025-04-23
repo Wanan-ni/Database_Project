@@ -26,7 +26,6 @@ def main():
 
                 print("\n ************** Query result **************")
                 output = result.get("results", "")
-                print("output:", output)
                 if isinstance(output, str):
                     print(output)
                 elif isinstance(output, list):
