@@ -13,9 +13,11 @@ USC DSCI551 2025 Spring Project
 
 ![Flow Chart](flow_chart.svg)
 
-####  Result Example. 
+#### Result Example.
+
 Three parts: LLM generated query; Query result; Monitor
 ![Example](result_example.png)
+
 # How to Use ChatDB
 
 1. **Start the backend server**
@@ -78,9 +80,6 @@ generate sql query: insert One example to candidate table, information is candid
 generate sql query: insert One example to candidate table, information is candidate_id=22222, career_objective="Make more money"
 ```
 
-```sql
-generate sql query: insert One example to candidate table, information is candidate_id=33333, career_objective="Make more money"
-```
 
 ```sql
 generate sql query: show me all candidates whose career_objective is "Make more money"
@@ -107,10 +106,6 @@ generate sql query: insert one candidate whose candidate_id is 99999 and address
 ```
 
 ```sql
-generate sql query: show the address of candidate whose candidate_id is 99999
-```
-
-```sql
 generate sql query: update the address of candidate whose candidate_id is 99999 to "New York"
 ```
 
@@ -124,35 +119,31 @@ generate sql query: show the address of candidate whose candidate_id is 99999
 generate sql query: If candidates passing_year smaller than 2020, sbutract 1 from the value of passing_year
 ```
 
-```sql
-generate sql query: If candidates passing_year >= 2020, sbutract 1 from the value of passing_year
-```
-
 ### Find
 
 ```sql
 generate sql query: find distinct candidates all information if their career_objective mentioned AI
 ```
 
-```sql
-generate sql query: find the number of distinct candidates whose career_objective mentioned AI
-```
-
-#### ORDER BY, LIMIT
+#### LIMIT, OFFSET
 
 ```sql
-generate sql query: find 5 candidate whose major is computer science(case insensetive), please return their candidate_id, insititution_name and their degree, you should sort by their insititution_name
+generate sql query: skip the first 10 candidates and return the next 5
 ```
 
 ### Aggregate
 
-#### SUM, ORDER BY
-
+#### COUNT & GROUP BY
 ```sql
-generate sql query: Count how many distinct candidates there are for each degree type, return it by sorting degree type
+generate sql query: count how many education records there are for each degree type
 ```
 
-#### HAVING, GROUP BY
+#### AVG & ORDER BY
+```sql
+generate sql query: compute the average passing year for each degree type, and sort the result by average passing year in descending order
+```
+
+#### HAVING
 
 ```sql
 generate sql query: find all candidates whose number of experiences equals to the absolute maximum number of experiences. Return their candidate_id and the count of their experiences.
@@ -219,45 +210,36 @@ generate mongodb query: update one example: decrement only one candidate passing
 #### updateMany
 
 ```sql
-generate mongodb query: If candidates passing_year smaller than 2020, add by 5
+generate mongodb query: If candidates passing_year smaller than 2030, decrement by 5
 ```
 
 #### Find
 
-```sql
-generate mongodb query: Find candidates all information if their career_objective mentioned AI
-```
 
 ```sql
 generate mongodb query: find the number of candidates whose career_objective mentioned AI, using method find and count
 ```
 
 #### Aggregate
-
-$groupby, $sort, $count
+$sort, $limit, $skip, $group, $count, $project
 
 ```sql
-generate mongodb query: Count how many distinct candidates there are for each degree type, return it by sorting degree type
+generate mongodb query: find 5 candidates whose experience number is bigger than or equals 2,  return their candidate id, and experience count and sorting by their candidate id, please skip the first 5 results
 ```
-
-$sort, $limit, $group
-
+$avg
 ```sql
-generate mongodb query: find 5 candidates whose experience number is bigger than or equals 2,  return their candidate id, and experience count and sorting by their candidate id
-```
-
-```sql
-generate mongodb query: find 5 candidate whose major is computer science(case insensetive), please return their candidate_id, insititution_name and their degree, you should sort by their insititution_name, using method find
+generate mongodb query: find average passing year of all candidates
 ```
 
 $lookup(2 tables), $group, $project
 
 ```sql
-generate mongodb query: find how many distinct candidates meet following constraints: they used to be "Software Engineer" and their degree name is "PhD"(hint: to get correct answer, we need to use three table)
+
+generate mongodb query: find how many distinct candidates meet following constraints: they used to be "Software Engineer" and their degree name is "PhD"(hint: to get correct answer, we need to use two tables)
 ```
 
 $lookup(3 tables), $group, $project
 
 ```sql
-generate mongodb query: find candidates meet following constraints: they used to be "Software Engineer" and their degree name is "PhD"(hint: to get correct answer, we need to use three table), return their id and address
+generate mongodb query: find candidates meet following constraints: they used to be "Software Engineer" and their degree name is "PhD"(hint: to get correct answer, we need to use three tables), return their id and address
 ```
