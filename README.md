@@ -234,6 +234,7 @@ generate mongodb query: find average passing year of all candidates
 $lookup(2 tables), $group, $project
 
 ```sql
+
 generate mongodb query: find how many distinct candidates meet following constraints: they used to be "Software Engineer" and their degree name is "PhD"(hint: to get correct answer, we need to use two tables)
 ```
 
