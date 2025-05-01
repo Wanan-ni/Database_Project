@@ -295,7 +295,7 @@ def execute_mongodb_query(query):
             return {"error": f"Unsupported operation: {operation}"}
 
     except Exception as e:
-        return {"error": str(e)}
+        return {"error": "Invalid query.\n error details:"+str(e)}
 
 
 def clean_query(text):
