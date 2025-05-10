@@ -51,7 +51,7 @@ pip install -r requirements.txt
 
 4. **Configure API key and database access**
 
-Open config.json, then fill in your own Gemini API key and DB credentials.
+Open llm_agent/config.json, then fill in your own Gemini API key and DB credentials.
 
 5. **Start the backend server**
 
