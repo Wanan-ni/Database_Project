@@ -18,9 +18,41 @@ USC DSCI551 2025 Spring Project
 Three parts: LLM generated query; Query result; Monitor
 ![Example](result_example.png)
 
-# How to Use ChatDB
+# Prerequisites
 
-1. **Start the backend server**
+- Python 3.10+
+- pip
+- [Gemini API Key](https://aistudio.google.com/app/apikey)
+- MySQL & MongoDB running locally or remotely (connection info configurable)
+- Recommended: virtual environment (`venv`)
+
+
+# How to Use ChatDB
+1. **Clone the repository**
+```bash
+git clone https://github.com/Wanan-ni/Database_Project.git
+```
+
+2. **Create and activate a virtual environment (recommended)**
+```bash
+# Windows
+python -m venv venv
+.\venv\Scripts\activate
+
+# macOS/Linux
+python3 -m venv venv
+source venv/bin/activate
+```
+
+3. **Install dependencies**
+```bash
+pip install -r requirements.txt
+```
+
+4. **Configure API key and database access**
+Open config.json, then fill in your own Gemini API key and DB credentials.
+
+5. **Start the backend server**
 
 In one terminal, run:
 
@@ -30,7 +62,7 @@ python main.py
 
 Once the server is running at `http://127.0.0.1:5000`, leave this terminal open.
 
-2. **Run the client interface**
+6. **Run the client interface**
 
 In another terminal, run:
 
@@ -116,7 +148,7 @@ generate sql query: show the address of candidate whose candidate_id is 99999
 #### Update multiple rows
 
 ```sql
-generate sql query: If candidates passing_year smaller than 2020, sbutract 1 from the value of passing_year
+generate sql query: If candidates passing_year smaller than 2020, subtract 1 from the value of passing_year
 ```
 
 ### Find
@@ -234,7 +266,6 @@ generate mongodb query: find average passing year of all candidates
 $lookup(2 tables), $group, $project
 
 ```sql
-
 generate mongodb query: find how many distinct candidates meet following constraints: they used to be "Software Engineer" and their degree name is "PhD"(hint: to get correct answer, we need to use two tables)
 ```
 
