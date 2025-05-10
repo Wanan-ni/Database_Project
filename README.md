@@ -50,6 +50,7 @@ pip install -r requirements.txt
 ```
 
 4. **Configure API key and database access**
+
 Open config.json, then fill in your own Gemini API key and DB credentials.
 
 5. **Start the backend server**
@@ -76,7 +77,7 @@ You will be prompted to input natural language queries:
 please input your query: 
 ```
 
-3. **Exit**
+7. **Exit**
 
 Type `exit` or `quit` to close the client.
 
